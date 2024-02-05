@@ -19,6 +19,7 @@ export default {
       },
       animation: {
         spinSlow: "spin 10s linear infinite",
+        wave: "wave 1s ease-in-out infinite",
       },
       keyframes: {
         spin: {
@@ -27,6 +28,14 @@ export default {
           },
           to: {
             transform: "rotate(360deg)",
+          },
+        },
+        wave: {
+          "0% 100%": {
+            transform: "rotate(-3deg)",
+          },
+          "50%": {
+            transform: "rotate(3deg)",
           },
         },
       },

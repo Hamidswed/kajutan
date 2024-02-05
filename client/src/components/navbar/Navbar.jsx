@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/kajutan.svg";
+import Logo1 from "../../assets/logo/kajutan1.svg";
+import Logo2 from "../../assets/logo/kajutan2.svg";
+import Logo3 from "../../assets/logo/kajutan3.svg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
 
@@ -49,8 +51,10 @@ export function Navbar() {
         </div>
       </div>
 
-      <div className="w-1/3">
-        <img src={Logo} alt="logo" />
+      <div className="w-1/3 relative top-0">
+        <img className="absolute" src={Logo1} alt="logo" />
+        <img className="absolute animate-spinSlow" src={Logo2} alt="logo" />
+        <img className="absolute animate-wave" src={Logo3} alt="logo" />
       </div>
       <div className="w-8 text-white opacity-0">
         <Bars3Icon />

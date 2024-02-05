@@ -4,7 +4,7 @@ import { MapPinIcon } from "@heroicons/react/16/solid";
 
 export function Body() {
   return (
-    <div className="px-4 mt-12">
+    <div className="px-4 mt-16">
       <div>
         <div className="text-k-lightBrown relative flex flex-col items-center">
           <h2 className="bg-neutral-800 px-4 absolute -top-3">Öppettider</h2>
