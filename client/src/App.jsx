@@ -3,6 +3,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Home } from "./pages/Home";
 import { Background } from "./components/background/Background";
 import { Menu } from "./pages/Menu";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
