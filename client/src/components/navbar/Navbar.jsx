@@ -51,7 +51,7 @@ export function Navbar() {
         </div>
       </div>
 
-      <div className="w-1/3 relative top-0">
+      <div className="w-1/3 relative -top-2 ">
         <img className="absolute" src={Logo1} alt="logo" />
         <img className="absolute animate-spinSlow" src={Logo2} alt="logo" />
         <img className="absolute animate-wave" src={Logo3} alt="logo" />

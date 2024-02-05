@@ -5,7 +5,7 @@ import Menu4 from "../../assets/menu/4.jpg";
 
 export function MenuList() {
   return (
-    <div className="px-4 flex flex-col items-center gap-y-3">
+    <div className="px-4 flex flex-col items-center gap-y-3 mt-5">
       <div className="border border-k-brown">
         <img src={Menu1} alt="menu1" />
       </div>
@@ -18,6 +18,7 @@ export function MenuList() {
       <div className="border border-k-brown">
         <img src={Menu4} alt="menu4" />
       </div>
+      <div className="h-24"></div>
     </div>
   );
 }
