@@ -10,7 +10,13 @@ export function Navbar() {
 
   return (
     <div className="container px-5 mx-auto flex gap-x-4 justify-between items-center py-4">
-      <div className="w-8 text-white relative">
+      <div
+        onClick={() => setIsOpen(false)}
+        className={`${
+          isOpen ? "" : "hidden"
+        } backdrop-blur-sm w-full h-screen absolute bg-neutral-700/20 top-0 left-0 z-20 `}
+      ></div>
+      <div className="w-8 text-white relative z-30">
         {isOpen ? (
           <XMarkIcon onClick={() => setIsOpen(false)} />
         ) : (
@@ -20,7 +26,7 @@ export function Navbar() {
         <div
           className={`${
             isOpen ? "" : "hidden"
-          } absolute bg-white left-0 w-32 z-20 rounded-md`}
+          } absolute bg-white left-0 w-32 z-30 rounded-md`}
         >
           <ul className="flex flex-col sm:text-lg text-neutral-500 divide-y">
             <li
@@ -33,7 +39,7 @@ export function Navbar() {
               className="hover:text-k-brown p-2"
               onClick={() => setIsOpen(false)}
             >
-              <Link to="/menu">Menu</Link>
+              <Link to="/menu">Meny</Link>
             </li>
             <li
               className="hover:text-k-brown p-2"
