@@ -5,18 +5,20 @@ import Menu4 from "../../assets/menu/4.jpg";
 
 export function MenuList() {
   return (
-    <div className="px-4 flex flex-col items-center gap-y-3 mt-5">
-      <div className="border border-k-brown">
-        <img src={Menu1} alt="menu1" />
-      </div>
-      <div className="border border-k-brown">
-        <img src={Menu2} alt="menu2" />
-      </div>
-      <div className="border border-k-brown">
-        <img src={Menu3} alt="menu3" />
-      </div>
-      <div className="border border-k-brown">
-        <img src={Menu4} alt="menu4" />
+    <div>
+      <div className="px-4 flex flex-col items-center gap-y-3 mt-5 md:flex-row md:flex-wrap md:justify-center md:gap-x-4">
+        <div className="border border-k-brown md:w-[42%] lg:w-1/5">
+          <img src={Menu1} alt="menu1" />
+        </div>
+        <div className="border border-k-brown md:w-[42%] lg:w-1/5">
+          <img src={Menu2} alt="menu2" />
+        </div>
+        <div className="border border-k-brown md:w-[42%] lg:w-1/5">
+          <img src={Menu3} alt="menu3" />
+        </div>
+        <div className="border border-k-brown md:w-[42%] lg:w-1/5">
+          <img src={Menu4} alt="menu4" />
+        </div>
       </div>
       <div className="h-24"></div>
     </div>
