@@ -7,7 +7,7 @@ export function Hero() {
       <div className="w-full relative flex justify-center">
         <img className="translate-y-8" src={Pizza} alt="pizza" />
         <div className="text-white flex flex-col items-center absolute z-10 top-16">
-          <p className="text-k-lightBrown">Välkommna till</p>
+          <p className="text-k-lightBrown">Välkomna till</p>
           <p className="font-yellotail text-5xl">Kajutan</p>
         </div>
         <div className="text-white absolute -bottom-6 flex flex-col gap-y-3">
