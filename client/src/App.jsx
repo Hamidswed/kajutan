@@ -5,7 +5,7 @@ import { Background } from "./components/background/Background";
 
 function App() {
   return (
-    <div className="bg-k-background h-screen">
+    <div className="bg-neutral-800 h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
