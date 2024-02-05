@@ -18,9 +18,9 @@ export function Navbar() {
         <div
           className={`${
             isOpen ? "" : "hidden"
-          } absolute bg-k-lightBrown left-0 w-32 z-20 rounded-md`}
+          } absolute bg-white left-0 w-32 z-20 rounded-md`}
         >
-          <ul className="flex flex-col sm:text-lg text-white divide-y">
+          <ul className="flex flex-col sm:text-lg text-neutral-500 divide-y">
             <li
               className="hover:text-k-brown p-2"
               onClick={() => setIsOpen(false)}
