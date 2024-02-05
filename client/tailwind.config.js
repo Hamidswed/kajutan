@@ -11,7 +11,7 @@ export default {
         "K-blue": "#0076af",
         "k-nafti": "#00467d",
         "k-darkBlue": "#00557d",
-        "k-background": "#250a04",
+        "k-background": "#330000",
       },
       fontFamily: {
         sans: ['"Noto Sans", sans-serif'],
