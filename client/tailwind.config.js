@@ -6,9 +6,9 @@ export default {
       colors: {
         "k-brown": "#926b48",
         "k-lightBrown": "#c48d63",
-        "K-xlightBrown": "#daa676",
+        "k-xlightBrown": "#daa676",
         "k-lightBlue": "#0091c9",
-        "K-blue": "#0076af",
+        "k-blue": "#0076af",
         "k-nafti": "#00467d",
         "k-darkBlue": "#00557d",
         "k-background": "#330000",
