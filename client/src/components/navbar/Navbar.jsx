@@ -21,13 +21,28 @@ export function Navbar() {
           } absolute bg-k-lightBrown left-0 w-32 z-20 rounded-md`}
         >
           <ul className="flex flex-col sm:text-lg text-white divide-y">
-            <li className="hover:text-k-brown p-2">
-              <Link>Hem</Link>
+            <li
+              className="hover:text-k-brown p-2"
+              onClick={() => setIsOpen(false)}
+            >
+              <Link to="/">Hem</Link>
             </li>
-            <li className="hover:text-k-brown p-2">
+            <li
+              className="hover:text-k-brown p-2"
+              onClick={() => setIsOpen(false)}
+            >
+              <Link to="/menu">Menu</Link>
+            </li>
+            <li
+              className="hover:text-k-brown p-2"
+              onClick={() => setIsOpen(false)}
+            >
               <Link>Om Kajutan</Link>
             </li>
-            <li className="hover:text-k-brown p-2">
+            <li
+              className="hover:text-k-brown p-2"
+              onClick={() => setIsOpen(false)}
+            >
               <Link>Kontakta oss</Link>
             </li>
           </ul>
