@@ -11,9 +11,11 @@ export default {
         "K-blue": "#0076af",
         "k-nafti": "#00467d",
         "k-darkBlue": "#00557d",
+        "k-background": "#250a04",
       },
       fontFamily: {
-        sans: ["Noto Sans", "sans-serif"],
+        sans: ['"Noto Sans", sans-serif'],
+        yellotail: ['"Yellowtail"'],
       },
       animation: {
         spinSlow: "spin 10s linear infinite",
