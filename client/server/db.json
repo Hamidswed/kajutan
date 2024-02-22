@@ -5,28 +5,32 @@
       "title":"MARGHERITA",
       "price":85,
       "category":"pizza",
-      "ingredient":""
+      "ingredient":"",
+      "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
     },
     {
       "id":2,
       "title":"VESUVIO",
       "price":92,
       "category":"pizza",
-      "ingredient":"Skinka"
+      "ingredient":"Skinka",
+      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
     },
     {
       "id":3,
       "title":"TURINO",
       "price":92,
       "category":"pizza",
-      "ingredient":"Räkor"
+      "ingredient":"Räkor",
+      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
     },
     {
       "id":4,
       "title":"CAPRICCIOSA",
       "price":92,
       "category":"pizza",
-      "ingredient":"Skinka, champinjoner"
+      "ingredient":"Skinka, champinjoner",
+      "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
     }
   ]
 }
