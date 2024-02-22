@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/menu";
+const BASE_URL = "http://localhost:5000/food";
 
 export function useFetch() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  
   useEffect(() => {
     async function fetchData() {
       try {

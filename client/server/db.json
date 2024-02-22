@@ -1,36 +1,85 @@
 {
-  "menu":[
+  "food":[
     {
       "id":1,
-      "title":"MARGHERITA",
-      "price":85,
-      "category":"pizza",
-      "ingredient":"",
-      "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+      "main_title":"PIZZOR",
+      "included":"ost och tomatsäs",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":1,
+          "title":"MARGHERITA",
+          "price":85,
+          "category":"pizza",
+          "ingredient":"",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":2,
+          "title":"VESUVIO",
+          "price":92,
+          "category":"pizza",
+          "ingredient":"Skinka",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":3,
+          "title":"TURINO",
+          "price":92,
+          "category":"pizza",
+          "ingredient":"Räkor",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":4,
+          "title":"CAPRICCIOSA",
+          "price":92,
+          "category":"pizza",
+          "ingredient":"Skinka, champinjoner",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
     },
     {
       "id":2,
-      "title":"VESUVIO",
-      "price":92,
-      "category":"pizza",
-      "ingredient":"Skinka",
-      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
-    },
-    {
-      "id":3,
-      "title":"TURINO",
-      "price":92,
-      "category":"pizza",
-      "ingredient":"Räkor",
-      "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
-    },
-    {
-      "id":4,
-      "title":"CAPRICCIOSA",
-      "price":92,
-      "category":"pizza",
-      "ingredient":"Skinka, champinjoner",
-      "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+      "main_title":"INBAKADE PIZZOR",
+      "included":"ost och tomatsäs",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":1,
+          "title":"CALZONE",
+          "price":92,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":2,
+          "title":"CALZOCCINO",
+          "price":96,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka, champinjoner",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":3,
+          "title":"CALZONE ROHDOS",
+          "price":96,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka, räkor",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":4,
+          "title":"CALZONE SPECIAL",
+          "price":99,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka, champinjoner, räkor",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
     }
-  ]
+]
+  
 }

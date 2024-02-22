@@ -3,16 +3,18 @@ import Menu2 from "../../assets/menu/2.jpg";
 import Menu3 from "../../assets/menu/3.jpg";
 import Menu4 from "../../assets/menu/4.jpg";
 import { useFetch } from "../../hook/useFetch";
+import { MenuHeader } from "./MenuHeader";
 import { MenuItem } from "./MenuItem";
 
 export function MenuList() {
   const { isLoading, data } = useFetch();
+  console.log(data, "list");
 
   if (isLoading) return <p className="text-white">Loading...</p>;
   return (
-    <div className="px-4 mt-5 flex flex-col gap-y-2">
+    <div className="px-4 mt-5 flex flex-col gap-y-4">
       {data.map((item) => {
-        return <MenuItem key={item.id} item={item} />;
+        return <MenuHeader key={item.id} item={item} />;
       })}
 
       {/* <div className="px-4 flex flex-col items-center gap-y-3 mt-5 md:flex-row md:flex-wrap md:justify-center md:gap-x-4">
@@ -29,7 +31,7 @@ export function MenuList() {
           <img src={Menu4} alt="menu4" />
         </div>
       </div> */}
-      <div className="h-24"></div>
+      <div className="h-20"></div>
     </div>
   );
 }
