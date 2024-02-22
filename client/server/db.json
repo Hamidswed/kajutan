@@ -1,0 +1,32 @@
+{
+  "menu":[
+    {
+      "id":1,
+      "title":"MARGHERITA",
+      "price":85,
+      "category":"pizza",
+      "ingredient":""
+    },
+    {
+      "id":2,
+      "title":"VESUVIO",
+      "price":92,
+      "category":"pizza",
+      "ingredient":"Skinka"
+    },
+    {
+      "id":3,
+      "title":"TURINO",
+      "price":92,
+      "category":"pizza",
+      "ingredient":"Räkor"
+    },
+    {
+      "id":4,
+      "title":"CAPRICCIOSA",
+      "price":92,
+      "category":"pizza",
+      "ingredient":"Skinka, champinjoner"
+    }
+  ]
+}

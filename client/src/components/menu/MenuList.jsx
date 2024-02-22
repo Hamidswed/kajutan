@@ -2,8 +2,12 @@ import Menu1 from "../../assets/menu/1.jpg";
 import Menu2 from "../../assets/menu/2.jpg";
 import Menu3 from "../../assets/menu/3.jpg";
 import Menu4 from "../../assets/menu/4.jpg";
+import { useFetch } from "../../hook/useFetch";
 
 export function MenuList() {
+  const { isLoading, data } = useFetch();
+  console.log(data,isLoading);
+  if (isLoading) return <p className="text-white">Loading...</p>;
   return (
     <div>
       <div className="px-4 flex flex-col items-center gap-y-3 mt-5 md:flex-row md:flex-wrap md:justify-center md:gap-x-4">

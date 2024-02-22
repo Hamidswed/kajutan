@@ -72,11 +72,15 @@ export function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="w-1/3 relative -top-2 min-[580px]:w-[30%] sm:w-[28%] md:w-[17%] md:-top-7 lg:w-[12%]">
+      {/* logo */}
+      <Link
+        to="/"
+        className="w-1/3 relative -top-2 min-[580px]:w-[30%] sm:w-[28%] md:w-[17%] md:-top-7 lg:w-[12%]"
+      >
         <img className="absolute" src={Logo1} alt="logo" />
         <img className="absolute animate-spinSlow" src={Logo2} alt="logo" />
         <img className="absolute animate-wave" src={Logo3} alt="logo" />
-      </div>
+      </Link>
       <div className="w-8 text-white opacity-0 md:hidden">
         <Bars3Icon />
       </div>
