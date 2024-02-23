@@ -19,7 +19,7 @@ export function MenuHeader({ item }) {
 
         <div className="flex-1">
           <p>{item.main_title}</p>
-          <p className="text-sm">
+          <p className="text-sm text-k-brown">
             {!open
               ? item.included.length <= 40
                 ? item.included
