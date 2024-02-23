@@ -9,9 +9,18 @@ export function MenuList() {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
+    // setFilteredData(
+    //   data.filter((item) =>
+    //     item.main_title.toLowerCase().includes(searchItem.toLowerCase())
+    //   )
+    // );
     setFilteredData(
       data.filter((item) =>
-        item.main_title.toLowerCase().includes(searchItem.toLowerCase())
+        item.menu.some(
+          (menu) =>
+            menu.title.toLowerCase().includes(searchItem.toLowerCase()) ||
+            menu.category.toLowerCase().includes(searchItem.toLowerCase())
+        )
       )
     );
   }, [searchItem, data]);

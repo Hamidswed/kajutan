@@ -9,7 +9,7 @@ export function Search({ searchItem, setSearchItem }) {
           type="text"
           value={searchItem}
           onChange={(e) => setSearchItem(e.target.value)}
-          placeholder="MARGHERITA..."
+          placeholder="Sök t ex Calzone..."
           className="bg-transparent outline-none placeholder-k-brown placeholder-opacity-50"
         />
       </div>

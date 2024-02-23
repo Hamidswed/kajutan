@@ -4,7 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 export function MenuHeader({ item }) {
   const [open, setOpen] = useState(false);
-  console.log(item.menu, "item");
+  
   return (
     <div
       className="w-full border border-k-lightBrown text-k-lightBrown p-2 rounded-lg"
