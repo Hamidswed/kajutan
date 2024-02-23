@@ -19,7 +19,13 @@ export function MenuHeader({ item }) {
 
         <div className="flex-1">
           <p>{item.main_title}</p>
-          <p className="text-sm">{item.included}</p>
+          <p className="text-sm">
+            {!open
+              ? item.included.length <= 40
+                ? item.included
+                : item.included.slice(0, 25) + " ..."
+              : item.included}
+          </p>
         </div>
         <div className="w-5 h-5">
           <ChevronDownIcon
