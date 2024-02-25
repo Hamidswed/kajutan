@@ -23,10 +23,10 @@ export function Table({ filteredData, searchItem }) {
                 return (
                   <tr key={food.id}>
                     <td className="w-full p-0 min-[400px]:p-2 md:p-3 lg:p-4 min-[450px]:w-[30%] min-[600px]:w-[25%] md:w-[20%] lg:w-[15%]">
-                      <img src={food.image} alt={food.title} className="" />
+                      <img src={food.image} alt={food.title} />
                     </td>
                     <td>{food.title}</td>
-                    <td>{food.category}</td>
+                    <td className="text-k-brown">{food.category}</td>
                     <td>{food.price}</td>
                   </tr>
                 );
