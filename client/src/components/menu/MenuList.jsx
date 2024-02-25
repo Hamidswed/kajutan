@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useFetch } from "../../hook/useFetch";
 import { Search } from "../search/Search";
 import { MenuHeader } from "./MenuHeader";
+import { Table } from "../table/Table";
 
 export function MenuList() {
   const { isLoading, data } = useFetch();
@@ -9,17 +10,10 @@ export function MenuList() {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    // setFilteredData(
-    //   data.filter((item) =>
-    //     item.main_title.toLowerCase().includes(searchItem.toLowerCase())
-    //   )
-    // );
     setFilteredData(
       data.filter((item) =>
-        item.menu.some(
-          (menu) =>
-            menu.title.toLowerCase().includes(searchItem.toLowerCase()) ||
-            menu.category.toLowerCase().includes(searchItem.toLowerCase())
+        item.menu.find((menu) =>
+          menu.title.toLowerCase().includes(searchItem.toLowerCase())
         )
       )
     );
@@ -33,13 +27,22 @@ export function MenuList() {
         searchItem={searchItem}
         setSearchItem={setSearchItem}
       />
-      <div className="flex flex-col gap-y-2 sm:gap-y-3 lg:gap-y-4">
-        {filteredData.length === 0 && (
-          <p className="text-white w-full">Inget hittat!</p>
+      <div className="flex flex-col gap-y-2 sm:gap-y-3 lg:gap-y-4 items-center justify-center">
+        {filteredData.length === 0 ? (
+          <p className="text-white w-full flex justify-center mb-3">
+            Inget hittat!
+          </p>
+        ) : (
+          searchItem !== "" && (
+            <div className="w-1/2 mx-3 min-[500px]:w-full">
+              <Table filteredData={filteredData} searchItem={searchItem}/>
+            </div>
+          ) //
         )}
-        {filteredData.map((item) => {
-          return <MenuHeader key={item.id} item={item} />;
-        })}
+        {searchItem === "" &&
+          data.map((item) => {
+            return <MenuHeader key={item.id} item={item} />;
+          })}
       </div>
       <div className="h-20"></div>
     </div>

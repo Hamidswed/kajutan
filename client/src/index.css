@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table .title-row{
+  background-color: gray;
+}
+
+table td,
+table th{
+  border-bottom: 1px solid #926b48;
+  white-space: nowrap;
+}
+
+table th{
+  padding: .6rem 1rem;
+  color: #926b48;
+  font-size: .9rem;
+}
+
+table td{
+  font-size: .85rem;
+  padding: 1rem 1rem;
+  color: #fff;
+}

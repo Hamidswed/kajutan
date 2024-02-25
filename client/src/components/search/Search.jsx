@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 
 export function Search({ searchItem, setSearchItem }) {
