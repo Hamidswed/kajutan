@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
+import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/16/solid";
 
 export function Search({ searchItem, setSearchItem }) {
   return (
@@ -13,7 +13,14 @@ export function Search({ searchItem, setSearchItem }) {
         />
       </div>
       <button className="w-5 h-5">
-        <MagnifyingGlassIcon className="w-full text-k-xlightBrown hover:text-white transition-all duration-300 hover:scale-125" />
+        {searchItem === "" ? (
+          <MagnifyingGlassIcon className="w-full text-k-xlightBrown hover:text-white transition-all duration-300 hover:scale-125" />
+        ) : (
+          <XMarkIcon
+            onClick={() => setSearchItem("")}
+            className="w-full text-k-xlightBrown hover:text-white transition-all duration-300 hover:scale-125"
+          />
+        )}
       </button>
     </div>
   );
