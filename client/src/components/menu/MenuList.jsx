@@ -33,10 +33,14 @@ export function MenuList() {
         searchItem={searchItem}
         setSearchItem={setSearchItem}
       />
-      {filteredData.length === 0 && <p className="text-white">Inget hittat!</p>}
-      {filteredData.map((item) => {
-        return <MenuHeader key={item.id} item={item} />;
-      })}
+      <div className="flex flex-col gap-y-2 sm:gap-y-3 lg:gap-y-4">
+        {filteredData.length === 0 && (
+          <p className="text-white w-full">Inget hittat!</p>
+        )}
+        {filteredData.map((item) => {
+          return <MenuHeader key={item.id} item={item} />;
+        })}
+      </div>
       <div className="h-20"></div>
     </div>
   );
