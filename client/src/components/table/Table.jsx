@@ -9,11 +9,11 @@ export function Table({ filteredData, searchItem }) {
     <div className="overflow-x-auto">
       <table>
         <thead>
-          <tr className="text-start">
+          <tr>
             <th>#</th>
             <th>Titeln</th>
             <th>Kategori</th>
-            <th>Priset(kr)</th>
+            <th>kr</th>
           </tr>
         </thead>
         <tbody className="text-white">
