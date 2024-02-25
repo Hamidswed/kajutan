@@ -9,6 +9,13 @@ export function Table({ filteredData, searchItem }) {
   return (
     <div className="overflow-x-auto mb-4 px-4">
       <table className="w-full">
+        <thead>
+          <tr className="text-start">
+            <th>Titeln</th>
+            <th>Kategori</th>
+            <th>Priset</th>
+          </tr>
+        </thead>
         <tbody className="text-white">
           {found?.length !== 0 &&
             found?.map((item) => {
