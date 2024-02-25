@@ -7,8 +7,8 @@ export function Table({ filteredData, searchItem }) {
 
   console.log(found, "found");
   return (
-    <div className="overflow-x-auto mb-4 px-4">
-      <table className="w-full">
+    <div className="overflow-x-auto">
+      <table>
         <thead>
           <tr className="text-start">
             <th>Titeln</th>

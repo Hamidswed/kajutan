@@ -6,7 +6,7 @@
 table{
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  min-width: 100%;
 }
 
 table .title-row{
@@ -16,7 +16,7 @@ table .title-row{
 table td,
 table th{
   border-bottom: 1px solid #926b48;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   text-align: start;
 }
 
