@@ -34,8 +34,8 @@ export function MenuList() {
           </p>
         ) : (
           searchItem !== "" && (
-            <div className="w-1/2 mx-3 min-[500px]:w-full">
-              <Table filteredData={filteredData} searchItem={searchItem}/>
+            <div className="w-[80%] mx-3 min-[400px]:w-full">
+              <Table filteredData={filteredData} searchItem={searchItem} />
             </div>
           ) //
         )}
