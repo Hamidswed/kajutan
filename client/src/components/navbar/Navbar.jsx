@@ -49,7 +49,7 @@ export function Navbar() {
               className="hover:text-k-brown p-2"
               onClick={() => setIsOpen(false)}
             >
-              <Link>Om Kajutan</Link>
+              <Link to="/about">Om Kajutan</Link>
             </li>
             <li
               className="hover:text-k-brown p-2"
@@ -68,7 +68,7 @@ export function Navbar() {
             <Link to="/">Hem</Link>
           </li>
           <li className="hover:text-k-brown p-2">
-            <Link>Om Kajutan</Link>
+            <Link to="/about">Om Kajutan</Link>
           </li>
         </ul>
       </div>
