@@ -6,10 +6,7 @@ export function AboutUs() {
     <div className="h-screen lg:max-w-screen-lg">
       <h1 className="text-white flex justify-center items-center gap-x-2 mb-6">
         <span className="md:text-2xl">Om</span>
-        <span className="font-yellotail text-2xl md:text-4xl">
-          {" "}
-          Kajutan
-        </span>{" "}
+        <span className="font-yellotail text-2xl md:text-4xl">Kajutan</span>
       </h1>
       <div className="sm:flex sm:gap-x-4 lg:gap-x-6 flex flex-col sm:flex-row sm:justify-center">
         <div className="sm:w-1/2 flex flex-col items-center justify-stretch gap-y-3 md:w-1/3">

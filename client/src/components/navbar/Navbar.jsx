@@ -3,19 +3,25 @@ import Logo1 from "../../assets/logo/kajutan1.svg";
 import Logo2 from "../../assets/logo/kajutan2.svg";
 import Logo3 from "../../assets/logo/kajutan3.svg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
+import {
+  HomeIcon,
+  InformationCircleIcon,
+  ListBulletIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
 import { useState } from "react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="container px-5 mx-auto flex gap-x-4 justify-between items-center h-24">
+    <div className="container px-5 mx-auto flex gap-x-4 justify-between items-center mt-8">
       {/* backdrop */}
       <div
         onClick={() => setIsOpen(false)}
         className={`${
           isOpen ? "" : "hidden"
-        } backdrop-blur-sm w-full h-screen absolute bg-neutral-700/20 top-0 left-0 z-20 `}
+        } backdrop-blur-sm w-full h-screen absolute bg-neutral-700/20 top-0 left-0 right-0 z-20`}
       ></div>
 
       {/* bars icon */}
@@ -30,32 +36,44 @@ export function Navbar() {
         <div
           className={`${
             isOpen ? "" : "hidden"
-          } absolute bg-white left-0 w-32 z-30 rounded-md`}
+          } absolute bg-white left-0 w-36 z-30 rounded-md`}
         >
           <ul className="flex flex-col sm:text-lg text-neutral-500 divide-y">
             <li
               className="hover:text-k-brown p-2"
               onClick={() => setIsOpen(false)}
             >
-              <Link to="/">Hem</Link>
+              <Link to="/" className="flex items-center gap-x-2">
+                <HomeIcon className="w-5" />
+                <span>Hem</span>
+              </Link>
             </li>
             <li
               className="hover:text-k-brown p-2"
               onClick={() => setIsOpen(false)}
             >
-              <Link to="/menu">Meny</Link>
+              <Link to="/menu" className="flex items-center gap-x-2">
+                <ListBulletIcon className="w-5" />
+                <span>Meny</span>
+              </Link>
             </li>
             <li
               className="hover:text-k-brown p-2"
               onClick={() => setIsOpen(false)}
             >
-              <Link to="/about">Om Kajutan</Link>
+              <Link to="/about" className="flex items-center gap-x-2">
+                <InformationCircleIcon className="w-5" />
+                <span>Om oss</span>
+              </Link>
             </li>
             <li
               className="hover:text-k-brown p-2"
               onClick={() => setIsOpen(false)}
             >
-              <Link>Kontakta oss</Link>
+              <Link to="/contact" className="flex items-center gap-x-2">
+                <PhoneIcon className="w-5" />
+                <span>Kontakta oss</span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -91,7 +109,7 @@ export function Navbar() {
           </li>
 
           <li className="hover:text-k-brown p-2">
-            <Link>Kontakta oss</Link>
+            <Link to="/contact">Kontakta oss</Link>
           </li>
         </ul>
       </div>
