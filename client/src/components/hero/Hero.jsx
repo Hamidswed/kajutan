@@ -3,7 +3,7 @@ import Pizza from "../../assets/hero.png";
 
 export function Hero() {
   return (
-    <div className="w-full flex justify-center items-center mt-10">
+    <div className="w-full flex justify-center items-center mt-14">
       <div className="w-full relative flex justify-center">
         <img className="translate-y-8" src={Pizza} alt="pizza" />
         <div className="text-white flex flex-col items-center absolute z-10 top-10 min-[430px]:top-16 min-[460px]:top-20 min-[520px]:top-24 sm:top-28">
