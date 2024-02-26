@@ -12,7 +12,7 @@ export function Table({ filteredData, searchItem }) {
           <tr>
             <th>#</th>
             <th>Titeln</th>
-            <th>Kategori</th>
+            {/* <th>Kategori</th> */}
             <th>kr</th>
           </tr>
         </thead>
@@ -22,11 +22,17 @@ export function Table({ filteredData, searchItem }) {
               return item.map((food) => {
                 return (
                   <tr key={food.id}>
-                    <td className="w-full p-0 min-[400px]:p-2 md:p-3 lg:p-4 min-[450px]:w-[30%] min-[600px]:w-[25%] md:w-[20%] lg:w-[15%]">
+                    <td className="w-1/4 p-1 min-[400px]:p-2 md:p-3 min-[450px]:w-[25%] min-[600px]:w-[20%] md:w-[15%] lg:w-[10%]">
                       <img src={food.image} alt={food.title} />
                     </td>
-                    <td>{food.title}</td>
-                    <td className="text-k-brown">{food.category}</td>
+                    <td>
+                      {food.title}
+                      <br />
+                      <span className="text-k-brown text-xs">
+                        {food.category}
+                      </span>
+                    </td>
+                    {/* <td className="text-k-brown">{food.category}</td> */}
                     <td>{food.price}</td>
                   </tr>
                 );

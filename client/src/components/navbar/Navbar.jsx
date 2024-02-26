@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import Logo1 from "../../assets/logo/kajutan1.svg";
-import Logo2 from "../../assets/logo/kajutan2.svg";
-import Logo3 from "../../assets/logo/kajutan3.svg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import {
   HomeIcon,
@@ -10,6 +7,7 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { Logo } from "./Logo";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,9 +93,7 @@ export function Navbar() {
         to="/"
         className="w-1/3 relative -top-2 min-[580px]:w-[30%] sm:w-[28%] md:w-[17%] md:-top-7 lg:w-[12%]"
       >
-        <img className="absolute" src={Logo1} alt="logo" />
-        <img className="absolute animate-spinSlow" src={Logo2} alt="logo" />
-        <img className="absolute animate-wave" src={Logo3} alt="logo" />
+        <Logo />
       </Link>
       <div className="w-8 text-white opacity-0 md:hidden">
         <Bars3Icon />
