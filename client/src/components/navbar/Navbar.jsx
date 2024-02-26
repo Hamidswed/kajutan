@@ -63,7 +63,7 @@ export function Navbar() {
             >
               <Link to="/about" className="flex items-center gap-x-2">
                 <InformationCircleIcon className="w-5" />
-                <span>Om oss</span>
+                <span>Om Kajutan</span>
               </Link>
             </li>
             <li
