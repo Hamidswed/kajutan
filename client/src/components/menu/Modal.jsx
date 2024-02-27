@@ -10,7 +10,7 @@ export function Modal({ openModal, onClose, clickedFood }) {
       <div className="backdrop-blur-sm fixed top-0 left-0 w-full h-screen bg-neutral-700/20 z-30">
         <div
           ref={ref}
-          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-white shadow-sm transition-all duration-500 ease-in-out p-3 w-[calc(100vw-4rem)] min-[480px]:w-[calc(100vw-15rem)] sm:max-w-sm sm:w-[50%]"
+          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-white shadow-sm transition-all duration-500 ease-in-out p-3 w-[calc(100vw-4rem)] min-[400px]:w-[70%] min-[480px]:w-[calc(100vw-15rem)] sm:max-w-sm min-[600px]:w-[calc(100vw-18rem)] z-50 lg:max-h-[calc(100vh-7rem)] overflow-y-auto"
         >
           <div className="flex flex-col gap-y-2">
             <div className="flex justify-between border-b border-stone-500 p-1">
