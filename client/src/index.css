@@ -9,6 +9,19 @@
   }
 }
 
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+.animate-shake {
+  animation: shake 5s infinite;
+}
+
 table{
   border-collapse: collapse;
   border-spacing: 0;
