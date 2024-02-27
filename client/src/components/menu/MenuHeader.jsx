@@ -7,7 +7,7 @@ export function MenuHeader({ item }) {
 
   return (
     <div
-      className="w-full border border-k-lightBrown text-k-lightBrown p-2 rounded-lg"
+      className="w-full border border-k-lightBrown text-k-lightBrown p-2 rounded-lg transition duration-500"
       onClick={() => setOpen(!open)}
     >
       <div className="flex justify-between items-center gap-x-2 sm:gap-x-3">
@@ -37,7 +37,7 @@ export function MenuHeader({ item }) {
       </div>
 
       {open ? (
-        <div className="mt-3 space-y-2 transition-all duration-500">
+        <div className="mt-3 space-y-2">
           {item.menu.map((food) => {
             return <MenuItem key={food.id} food={food} />;
           })}
