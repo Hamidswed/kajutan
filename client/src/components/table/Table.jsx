@@ -1,4 +1,4 @@
-export function Table({ filteredData, searchItem }) {
+export function Table({ filteredData, searchItem, setClickedFood, onOpen }) {
   const found = filteredData.map((item) =>
     item.menu.filter((food) =>
       food.title.toLowerCase().includes(searchItem.toLowerCase())
@@ -20,9 +20,17 @@ export function Table({ filteredData, searchItem }) {
           {found?.length !== 0 &&
             found?.map((item) => {
               return item.map((food) => {
+                const openModalHandler = () => {
+                  onOpen();
+                  setClickedFood(food);
+                };
                 return (
-                  <tr key={food.id}>
-                    <td className="w-1/4 p-1 min-[400px]:p-2 md:p-3 min-[450px]:w-[25%] min-[600px]:w-[20%] md:w-[15%] lg:w-[10%]">
+                  <tr
+                    key={food.id}
+                    onClick={openModalHandler}
+                    className="cursor-pointer"
+                  >
+                    <td className="w-1/4 p-1 min-[400px]:p-2 md:p-3 min-[450px]:w-[25%] min-[600px]:w-[20%] md:w-[15%]">
                       <img src={food.image} alt={food.title} />
                     </td>
                     <td>

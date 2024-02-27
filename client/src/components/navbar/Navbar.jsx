@@ -19,7 +19,7 @@ export function Navbar() {
         onClick={() => setIsOpen(false)}
         className={`${
           isOpen ? "" : "hidden"
-        } backdrop-blur-sm w-full h-screen absolute bg-neutral-700/20 top-0 left-0 right-0 z-20`}
+        } backdrop-blur-sm w-full h-screen fixed bg-neutral-700/20 top-0 left-0 right-0 z-20`}
       ></div>
 
       {/* bars icon */}

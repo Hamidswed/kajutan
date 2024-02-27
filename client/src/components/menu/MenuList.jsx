@@ -9,6 +9,8 @@ export function MenuList() {
   const { isLoading, data } = useFetch();
   const [searchItem, setSearchItem] = useState("");
   const [filteredData, setFilteredData] = useState([]);
+  const [clickedFood, setClickedFood] = useState({});
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     setFilteredData(
@@ -38,7 +40,12 @@ export function MenuList() {
         ) : (
           searchItem !== "" && (
             <div className="w-full min-[400px]:w-full md:max-w-screen-md">
-              <Table filteredData={filteredData} searchItem={searchItem} />
+              <Table
+                filteredData={filteredData}
+                searchItem={searchItem}
+                setClickedFood={setClickedFood}
+                onOpen={() => setOpenModal(true)}
+              />
             </div>
           ) //
         )}
@@ -48,7 +55,11 @@ export function MenuList() {
           })}
       </div>
       {/* modal */}
-      <Modal className="hidden" />
+      <Modal
+        openModal={openModal}
+        clickedFood={clickedFood}
+        onClose={() => setOpenModal(false)}
+      />
       <div className="h-20"></div>
     </div>
   );
