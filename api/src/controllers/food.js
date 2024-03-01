@@ -1,24 +1,20 @@
-const foodList = [
-  {
-    id: 1,
-    name: "hamid",
-    age: 35,
-  },
-  {
-    id: 2,
-    name: "titi",
-    age: 30,
-  },
-  {
-    id: 3,
-    name: "bool",
-    age: 48,
-  },
-];
+import fs from "fs";
+import FoodServices from "../services/food.js";
+import Food from "../models/Food.js";
+
+let foodData = [];
+
+fs.readFile("./src/db.json", "utf8", (err, data) => {
+  if (err) {
+    console.error("Error reading JSON file:", err);
+    return;
+  }
+  foodData = JSON.parse(data);
+});
 
 export const getAllFoods = async (req, res) => {
   try {
-    res.json(foodList);
+    res.json(foodData);
   } catch (error) {
     res.json(error);
   }
@@ -26,9 +22,13 @@ export const getAllFoods = async (req, res) => {
 
 export const createNewFood = async (req, res) => {
   try {
-    const newFood = req.body;
-    foodList.push(newFood);
-    res.json(foodList);
+    const newFood = new Food({
+      title: req.body.title,
+      price: req.body.price,
+      category: req.body.category,
+      ingredient: req.body.ingredient,
+      image: req.body.image,
+    });
   } catch (error) {
     res.json(error);
   }

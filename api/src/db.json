@@ -1,0 +1,789 @@
+{
+  "food":[
+    {
+      "id":"f1",
+      "main_title":"PIZZOR",
+      "included":"ost och tomatsäs",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f1-1",
+          "title":"MARGHERITA",
+          "price":85,
+          "category":"PIZZOR",
+          "ingredient":"",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f1-2",
+          "title":"VESUVIO",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Skinka",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f1-3",
+          "title":"TURINO",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Räkor",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f1-4",
+          "title":"CAPRICCIOSA",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Skinka, champinjoner",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-5",
+          "title":"HAWAII",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Skinka, ananas",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-6",
+          "title":"ROMANA",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Bacon, lök",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-7",
+          "title":"ALTANO",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Tonfisk, lök",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-8",
+          "title":"DISKO",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Köttfärssås, vitlök",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-9",
+          "title":"CACCIATORE",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Salami, paprika, oliver",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-10",
+          "title":"BOLOGNESE",
+          "price":92,
+          "category":"PIZZOR",
+          "ingredient":"Köttfärssås, färska tomater, lök",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-11",
+          "title":"NAPOLITANA",
+          "price":95,
+          "category":"PIZZOR",
+          "ingredient":"Sardeller, oliver, vitlök",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-12",
+          "title":"OPERA",
+          "price":95,
+          "category":"PIZZOR",
+          "ingredient":"Skinka, tonfisk",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-13",
+          "title":"POTENSA",
+          "price":95,
+          "category":"PIZZOR",
+          "ingredient":"Bacon, ägg",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-14",
+          "title":"BUSSOLA",
+          "price":98,
+          "category":"PIZZOR",
+          "ingredient":"Skinka, räkor",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-15",
+          "title":"MAEINARA",
+          "price":98,
+          "category":"PIZZOR",
+          "ingredient":"Räkor, musslor",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-16",
+          "title":"PESCATORE",
+          "price":98,
+          "category":"PIZZOR",
+          "ingredient":"Räkor, tonfisk",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-17",
+          "title":"MAMMA MIA",
+          "price":98,
+          "category":"PIZZOR",
+          "ingredient":"Köttfärs, champinjoner, paprika",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-18",
+          "title":"HAWAII SPECIAL",
+          "price":98,
+          "category":"PIZZOR",
+          "ingredient":"Skinka, ananas, banan, curry",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-19",
+          "title":"HOTPEPPER",
+          "price":98,
+          "category":"PIZZOR",
+          "ingredient":"Skinka,salami,peperoni,stark krydda",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-20",
+          "title":"LINER",
+          "price":98,
+          "category":"PIZZOR",
+          "ingredient":"Salami, kapris, peperoni, paprika, vitlök",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-21",
+          "title":"MAXIM",
+          "price":105,
+          "category":"PIZZOR",
+          "ingredient":"Skinka, champinjoner, räkor",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-22",
+          "title":"LACCIANTI",
+          "price":105,
+          "category":"PIZZOR",
+          "ingredient":"Grilladekycklingbitar, champinjoner, paprika",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-23",
+          "title":"KEBABPIZZA",
+          "price":105,
+          "category":"PIZZOR",
+          "ingredient":"Kebabkött, lök, peperoni, färska, tomater, kebabdressing",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-24",
+          "title":"QUATTRO STAGIONI",
+          "price":105,
+          "category":"PIZZOR",
+          "ingredient":"Skinka, räkor, oliver, champinjoner, kronärtscocka",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-25",
+          "title":"SKÄRGÅRDSPIZZA",
+          "price":109,
+          "category":"PIZZOR",
+          "ingredient":"Räkor, rökta laxskivor, vitlök, spenat",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-26",
+          "title":"ROMANTICA",
+          "price":105,
+          "category":"PIZZOR",
+          "ingredient":"Räkor, tonfisk, musslor, krabba",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-27",
+          "title":"PICASSO",
+          "price":105,
+          "category":"PIZZOR",
+          "ingredient":"Bacon, grillade kycklingbitar, peperoni, stark krydda",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-28",
+          "title":"KAJUTAN SPECIAL",
+          "price":129,
+          "category":"PIZZOR",
+          "ingredient":"Marinarad oxfilé, lök, färska tomater, bearnaisesås",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-29",
+          "title":"ISOLA BELLA",
+          "price":129,
+          "category":"PIZZOR",
+          "ingredient":"Marinerad oxfilé, Purjolök, kronärtskocka, gorgonzolaost",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f1-30",
+          "title":"VOLCANO",
+          "price":129,
+          "category":"PIZZOR",
+          "ingredient":"halvinbakad) Marinerad oxfilé, champinjoner, starkkrydda, bearnaisesås",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f2",
+      "main_title":"INBAKADE PIZZOR",
+      "included":"ost och tomatsäs",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f2-1",
+          "title":"CALZONE",
+          "price":92,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f2-2",
+          "title":"CALZOCCINO",
+          "price":96,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka, champinjoner",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f2-3",
+          "title":"CALZONE ROHDOS",
+          "price":96,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka, räkor",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f2-4",
+          "title":"CALZONE SPECIAL",
+          "price":99,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"Skinka, champinjoner, räkor",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f2-5",
+          "title":"CALZONE MAGNUM",
+          "price":119,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"(dubbel deg, dubbel fyllning) Skinka",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f2-6",
+          "title":"CALZONE MAGNUM SPECIAL",
+          "price":129,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"(dubbel deg, dubbel fyllning) Skinka, champinjoner, räkor",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f3",
+      "main_title":"MEXIKANSKA PIZZOR",
+      "included":"",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f3-1",
+          "title":"AZTEKA",
+          "price":98,
+          "category":"MEXIKANSKA PIZZOR",
+          "ingredient":"Skinka, jalapeno, tacosås, tacokrydda, vitlök, créme fraiche",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f3-2",
+          "title":"MEXICANA",
+          "price":98,
+          "category":"MEXIKANSKA PIZZOR",
+          "ingredient":"Köttfärs, lök, vitlök, jalapeno, tacosås, tacokrydda",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f3-3",
+          "title":"ACAPULCO",
+          "price":129,
+          "category":"MEXIKANSKA PIZZOR",
+          "ingredient":"Marinerad oxfilé, champinjoner, lök, vitlök, jalapeno, tacosås, tacokrydda",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        }
+      ]
+    },
+    {
+      "id":"f4",
+      "main_title":"BARNMENY",
+      "included":"",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f4-1",
+          "title":"VESUVIO",
+          "price":72,
+          "category":"BARNMENY",
+          "ingredient":"",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f4-2",
+          "title":"CAPRICCIOSA",
+          "price":72,
+          "category":"BARNMENY",
+          "ingredient":"",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f4-3",
+          "title":"HAWAII",
+          "price":72,
+          "category":"BARNMENY",
+          "ingredient":"",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f4-4",
+          "title":"MINISKROVMÅL",
+          "price":69,
+          "category":"BARNMENY",
+          "ingredient":"45gr. Hamburgare, pommes frites och en 33cl. Läsk",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f4-5",
+          "title":"FRITERAD CHICKY BITS",
+          "price":69,
+          "category":"BARNMENY",
+          "ingredient":"med pommes strips och dip",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f4-6",
+          "title":"TUNNA PANNKAKOR",
+          "price":69,
+          "category":"BARNMENY",
+          "ingredient":"med sylt och glass eller grädde",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f5",
+      "main_title":"FAMILJEPIZZOR",
+      "included":"",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f5-1",
+          "title":"VESUVIO",
+          "price":279,
+          "category":"FAMILJEPIZZOR",
+          "ingredient":"",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f5-2",
+          "title":"CAPRICCIOSA",
+          "price":285,
+          "category":"FAMILJEPIZZOR",
+          "ingredient":"",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f5-3",
+          "title":"HAWAII",
+          "price":285,
+          "category":"FAMILJEPIZZOR",
+          "ingredient":"Skinka, räkor",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        }
+      ]
+    },
+    {
+      "id":"f6",
+      "main_title":"VEGETARISK MENY",
+      "included":"",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f6-1",
+          "title":"FALAFELPIZZA",
+          "price":95,
+          "category":"VEGETARISK MENY",
+          "ingredient":"Falafelbitar, peperoni, lök, tomater, kebab dressing",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f6-2",
+          "title":"SPENATPIZZA",
+          "price":95,
+          "category":"VEGETARISK MENY",
+          "ingredient":"Champinjoner, Lök,spenat,vitlök, fetaost",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f6-3",
+          "title":"ORTO",
+          "price":95,
+          "category":"VEGETARISK MENY",
+          "ingredient":"(pizza) Champinjoner, Paprika, kronärtskocka, lök, oliver",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f6-4",
+          "title":"FALAFELRULLE",
+          "price":95,
+          "category":"VEGETARISK MENY",
+          "ingredient":"Ost, falafelbitar, stark tomatsås, tomat, gurka, sallad, lök, kebab dressing, peperoni",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f6-5",
+          "title":"FALAFEL TALLRIK",
+          "price":95,
+          "category":"VEGETARISK MENY",
+          "ingredient":"Pommes frites, falafelbitar, stark tomatsås, sallad och dressing",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f6-6",
+          "title":"GREENBURGARMEAL",
+          "price":95,
+          "category":"VEGETARISK MENY",
+          "ingredient":"90gr. vegetarisk burgare, lök, ost, sallad, pommes frites och en 33cl.läsk",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f6-7",
+          "title":"GREKISK SALLAD",
+          "price":95,
+          "category":"VEGETARISK MENY",
+          "ingredient":"Tomat, Gurka,lök, sallad, fetaost, svarta oliver, paprika, och en vinegrette sås, riven ost",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f7",
+      "main_title":"PASTARÄTTER",
+      "included":"",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f7-1",
+          "title":"PASTA BOLOGNESE",
+          "price":109,
+          "category":"PASTARÄTTER",
+          "ingredient":"Köttfärssås toppad med parmesanost",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f7-2",
+          "title":"PASTA CARBONARA",
+          "price":109,
+          "category":"PASTARÄTTER",
+          "ingredient":"Med ost och skinksås, parmesanost",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f7-3",
+          "title":"PASTA MED RÄKOR",
+          "price":119,
+          "category":"PASTARÄTTER",
+          "ingredient":"I krämig vitvinsås och dill",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f7-4",
+          "title":"PASTA MED OXFILÉ",
+          "price":139,
+          "category":"PASTARÄTTER",
+          "ingredient":"I gräddig ädelostsås med purjolök och champinjoner",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f7-5",
+          "title":"PASTA AL POLLO",
+          "price":119,
+          "category":"PASTARÄTTER",
+          "ingredient":"Grillade kycklingbitar,paprika och purjolök i krämig currysås, toppad med fetaost, svarta oliver",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f7-6",
+          "title":"HUSETS PASTA",
+          "price":119,
+          "category":"PASTARÄTTER",
+          "ingredient":"Bacon, grillade kycklingbitar, purjolök och paprika i krämig ostsås, parmesanost",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f8",
+      "main_title":"SALLADRÄTTER",
+      "included":"Isberg sallad, riven ost, rödlök, gurka, tomat, gröna oliver, paprika, ananas och Rhode Island sås",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f8-1",
+          "title":"OST- OCH SKINKSALLAD",
+          "price":99,
+          "category":"SALLADRÄTTER",
+          "ingredient":"",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f8-2",
+          "title":"TONFISKSALLAD",
+          "price":95,
+          "category":"SALLADRÄTTER",
+          "ingredient":"",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f8-3",
+          "title":"RÄKSALLAD",
+          "price":99,
+          "category":"SALLADRÄTTER",
+          "ingredient":"",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f8-4",
+          "title":"KYCKLINGSALLAD",
+          "price":99,
+          "category":"SALLADRÄTTER",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f9",
+      "main_title":"HAMBURGARE",
+      "included":"en läsk ingår till alla mål",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f9-1",
+          "title":"SKROVMÅL",
+          "price":95,
+          "category":"HAMBURGARE",
+          "ingredient":"2x45gr. hamburgare med ost, sallad, hamburgare dressing och pommes frites",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f9-2",
+          "title":"SUPERSKROVMÅL",
+          "price":109,
+          "category":"HAMBURGARE",
+          "ingredient":"2x90gr. hamburgare med ost, sallad, hamburgare dressing och pommes frites",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f9-3",
+          "title":"PARAMÅL",
+          "price":95,
+          "category":"HAMBURGARE",
+          "ingredient":"110gr. parisare med bröd, ost, sallad, hamburgare dressing och pommes frites ",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f9-4",
+          "title":"Högrevsborgare",
+          "price":219,
+          "category":"HAMBURGARE",
+          "ingredient":"180g hemlagad hamburgare med ost, bröd, sallad, tomat, gurka, picklad rödlök, lantstrips och dip",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-5",
+          "title":"HEMLAGAD HAMBURGAREMÅL",
+          "price":169,
+          "category":"HAMBURGARE",
+          "ingredient":"200gr.hemlagad hamburgare med ost, dressing, tomat, gurka, sallad, lök, grova lantstrips och dip",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-6",
+          "title":"Hamburgare 45gr",
+          "price":45,
+          "category":"HAMBURGARE",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-7",
+          "title":"Hamburgare 90gr",
+          "price":62,
+          "category":"HAMBURGARE",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-8",
+          "title":"Ostburgare 45gr",
+          "price":49,
+          "category":"HAMBURGARE",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-9",
+          "title":"Ostburgare 90gr",
+          "price":67,
+          "category":"HAMBURGARE",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-10",
+          "title":"Parisare 110g",
+          "price":75,
+          "category":"HAMBURGARE",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-11",
+          "title":"Pizzasallad",
+          "price":25,
+          "category":"HAMBURGARE",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f9-12",
+          "title":"Vitlöksbröd",
+          "price":49,
+          "category":"HAMBURGARE",
+          "ingredient":"",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f10",
+      "main_title":"MERA GOTT FRÅN KAJUTAN",
+      "included":"gurka, tomat, lök, Isbergssallad",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f10-1",
+          "title":"KEBABRULLE",
+          "price":99,
+          "category":"MERA GOTT FRÅN KAJUTAN",
+          "ingredient":"Ost,kebabkött,stark tomatsås, peperoni och kebab sås",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f10-2",
+          "title":"KEBABTALLRIK",
+          "price":99,
+          "category":"MERA GOTT FRÅN KAJUTAN",
+          "ingredient":"Pommes strips, kebabkött, stark tomatsås, peperoni och kebab sås",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f10-3",
+          "title":"KYCKLINGRULLE",
+          "price":99,
+          "category":"MERA GOTT FRÅN KAJUTAN",
+          "ingredient":"Ost, grillade kycklingbitar, ananas, curry",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f10-4",
+          "title":"NACHOTALLRIK",
+          "price":95,
+          "category":"MERA GOTT FRÅN KAJUTAN",
+          "ingredient":"Nachochips, köttfärs sås med ost, tacosås, vitlöksdressing, jalapeno, crème fraiche",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f10-5",
+          "title":"FRITERADE KYCKLING NUGGETS",
+          "price":95,
+          "category":"MERA GOTT FRÅN KAJUTAN",
+          "ingredient":"Med pommes strips tacosås, vitlöksdressing och jalapeno",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    },
+    {
+      "id":"f11",
+      "main_title":"KÖTTRÄTTER",
+      "included":"sallad, tomat, gurka, lök och Rhode Island sås",
+      "main_img":"https://thomassixt.com/wp-content/uploads/sites/2/2023/06/pizza-capriciosa-580x325.jpg",
+      "menu":[
+        {
+          "id":"f11-1",
+          "title":"PANERAD FLÄSKSCHNITZEL",
+          "price":115,
+          "category":"KÖTTRÄTTER",
+          "ingredient":"med persiljesmör och pommes eller stekt potatis",
+          "image":"https://www.blossmangas.com/wp-content/uploads/2021/05/Margherita-pizza-2.jpg"
+        },
+        {
+          "id":"f11-2",
+          "title":"LÖVBIT",
+          "price":115,
+          "category":"KÖTTRÄTTER",
+          "ingredient":"med persiljesmör",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvLOiWzSFa8z7jof_Hj_4W6qO2vwBPzNwvWg&usqp=CAU"
+        },
+        {
+          "id":"f11-3",
+          "title":"GRILLAD FLÄSKFILÉ",
+          "price":195,
+          "category":"KÖTTRÄTTER",
+          "ingredient":"med bearnaisesås",
+          "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmEgjV_TbSQieHqrec0O2cLWB-fSOpmG4cbQ&usqp=CAU"
+        },
+        {
+          "id":"f11-4",
+          "title":"GRILLSPETT",
+          "price":195,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"av marinerad fläskfilé med bearnaisesås",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        },
+        {
+          "id":"f11-5",
+          "title":"GRILLAD OXFILÉ",
+          "price":259,
+          "category":"INBAKADE PIZZOR",
+          "ingredient":"med bearnaisesås",
+          "image":"https://static.onecms.io/wp-content/uploads/sites/19/2014/08/14/capricciosa-pizza-su-x.jpg"
+        }
+      ]
+    }
+]
+  
+}
