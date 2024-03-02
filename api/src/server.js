@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import app from "./app.js";
 
 dotenv.config();
-const port = 8000;
+const port = 8001;
 mongoose.set("strictQuery", false);
 
 mongoose

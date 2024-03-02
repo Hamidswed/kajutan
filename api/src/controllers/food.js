@@ -1,10 +1,11 @@
 import fs from "fs";
 import FoodServices from "../services/food.js";
 import Food from "../models/Food.js";
+import Category from "../models/Category.js";
 
 let foodData = [];
 
-fs.readFile("./src/db.json", "utf8", (err, data) => {
+fs.readFile("./src/newDB.json", "utf8", (err, data) => {
   if (err) {
     console.error("Error reading JSON file:", err);
     return;
@@ -14,21 +15,48 @@ fs.readFile("./src/db.json", "utf8", (err, data) => {
 
 export const getAllFoods = async (req, res) => {
   try {
-    res.json(foodData);
+    const foods = await FoodServices.getFoods();
+    res.json(foods);
   } catch (error) {
     res.json(error);
   }
 };
 
+export const createNewCategory = async (req, res) => {
+  try {
+    const newCategory = new Category({
+      main_title: req.body.main_title,
+      included: req.body.included,
+      main_img: req.body.main_img,
+    });
+    const category = await FoodServices.createCategory(newCategory);
+    res.json(category);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getAllCategories = async (req, res) => {
+  try {
+    const categories = await FoodServices.getCategories();
+    res.json(categories);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const createNewFood = async (req, res) => {
+  const { title, price, ingredient, image, category } = req.body;
   try {
     const newFood = new Food({
-      title: req.body.title,
-      price: req.body.price,
-      category: req.body.category,
-      ingredient: req.body.ingredient,
-      image: req.body.image,
+      title,
+      price,
+      ingredient,
+      image,
+      category,
     });
+    const food = await FoodServices.createFood(newFood);
+    res.json(food);
   } catch (error) {
     res.json(error);
   }
