@@ -14,8 +14,9 @@ export default {
         "k-background": "#330000",
       },
       fontFamily: {
-        sans: ['"Noto Sans", sans-serif'],
+        sans: ['"Maven Pro", sans-serif'],
         yellotail: ['"Yellowtail"'],
+        
       },
       animation: {
         spinSlow: "spin 10s linear infinite",

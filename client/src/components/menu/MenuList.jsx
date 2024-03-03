@@ -7,7 +7,12 @@ import { Modal } from "./Modal";
 import { Loading } from "../loading/Loading";
 
 export function MenuList() {
-  const { isLoading, data } = useFetch();
+  const BASE_URL1 = "http://localhost:8001/categories";
+  const BASE_URL2 = "http://localhost:8001/foods";
+
+  const { data: categories, isLoading: categoryLoading } = useFetch(BASE_URL1);
+  const { data: foods, isLoading } = useFetch(BASE_URL2);
+
   const [searchItem, setSearchItem] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [clickedFood, setClickedFood] = useState({});
@@ -15,23 +20,17 @@ export function MenuList() {
 
   useEffect(() => {
     setFilteredData(
-      data.filter((item) =>
-        item.menu.find((menu) =>
-          menu.title.toLowerCase().includes(searchItem.toLowerCase())
-        )
+      foods.filter((item) =>
+        item.title.toLowerCase().includes(searchItem.toLowerCase())
       )
     );
-  }, [searchItem, data]);
+  }, [searchItem, foods]);
 
   if (isLoading) return <Loading />;
   return (
     <div className="px-4 mt-5 flex flex-col gap-y-4 items-center">
       {/* search */}
-      <Search
-        data={data}
-        searchItem={searchItem}
-        setSearchItem={setSearchItem}
-      />
+      <Search searchItem={searchItem} setSearchItem={setSearchItem} />
       {/* menu */}
       <div className="flex flex-col gap-y-2 sm:gap-y-3 lg:gap-y-4 items-center justify-center">
         {filteredData.length === 0 ? (
@@ -51,8 +50,8 @@ export function MenuList() {
           ) //
         )}
         {searchItem === "" &&
-          data.map((item) => {
-            return <MenuHeader key={item.id} item={item} />;
+          categories.map((category) => {
+            return <MenuHeader key={category._id} category={category} foods={foods}/>;
           })}
       </div>
       {/* modal */}
