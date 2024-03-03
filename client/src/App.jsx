@@ -6,6 +6,7 @@ import { Footer } from "./components/footer/Footer";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 
+export const BASE_URL = "https://kajutan-bk.onrender.com";
 function App() {
   return (
     <div className="bg-neutral-800">

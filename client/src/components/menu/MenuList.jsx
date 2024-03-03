@@ -5,13 +5,15 @@ import { MenuHeader } from "./MenuHeader";
 import { Table } from "../table/Table";
 import { Modal } from "./Modal";
 import { Loading } from "../loading/Loading";
+import { BASE_URL } from "../../App";
 
 export function MenuList() {
-  const BASE_URL1 = "http://localhost:8001/categories";
-  const BASE_URL2 = "http://localhost:8001/foods";
+  const CATEGORY_URL = `${BASE_URL}/categories`;
+  const FOOD_URL = `${BASE_URL}/foods`;
 
-  const { data: categories, isLoading: categoryLoading } = useFetch(BASE_URL1);
-  const { data: foods, isLoading } = useFetch(BASE_URL2);
+  const { data: categories, isLoading: categoryLoading } =
+    useFetch(CATEGORY_URL);
+  const { data: foods, isLoading } = useFetch(FOOD_URL);
 
   const [searchItem, setSearchItem] = useState("");
   const [filteredData, setFilteredData] = useState([]);
@@ -51,7 +53,13 @@ export function MenuList() {
         )}
         {searchItem === "" &&
           categories.map((category) => {
-            return <MenuHeader key={category._id} category={category} foods={foods}/>;
+            return (
+              <MenuHeader
+                key={category._id}
+                category={category}
+                foods={foods}
+              />
+            );
           })}
       </div>
       {/* modal */}
