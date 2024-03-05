@@ -1,6 +1,14 @@
-export function MenuItem({ food }) {
+export function MenuItem({ food, onOpen, setClickedFood }) {
+  const openModalHandler = () => {
+    onOpen();
+    setClickedFood(food);
+  };
+
   return (
-    <div className="w-full flex justify-between items-center border-t border-k-xlightBrown rounded-md py-3 px-2 gap-x-3 lg:gap-x-6">
+    <div
+      onClick={openModalHandler}
+      className="w-full flex justify-between items-center border-t border-k-xlightBrown rounded-md py-3 px-2 gap-x-3 lg:gap-x-6 cursor-pointer"
+    >
       <div className="w-1/2 rounded-md overflow-hidden md:w-1/4 min-[510px]:w-1/3 lg:w-1/6">
         <img src={food.image} alt={food.title} className="w-full" />
       </div>

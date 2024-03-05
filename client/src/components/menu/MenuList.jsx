@@ -58,6 +58,8 @@ export function MenuList() {
                 key={category._id}
                 category={category}
                 foods={foods}
+                onOpen={()=>setOpenModal(true)}
+                setClickedFood={setClickedFood}
               />
             );
           })}
