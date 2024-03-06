@@ -1,11 +1,11 @@
 import useModalStore from "../../store/modalStore";
 
-export function MenuItem({ food, setClickedFood }) {
-  const { open, setOpen } = useModalStore();
+export function MenuItem({ food }) {
+  const { setOpen, setFood } = useModalStore();
 
   const openModalHandler = () => {
     setOpen();
-    setClickedFood(food);
+    setFood(food);
   };
 
   return (

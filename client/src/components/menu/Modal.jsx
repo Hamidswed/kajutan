@@ -2,8 +2,8 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useOutsideClick } from "../../hook/useOutsideClick";
 import useModalStore from "../../store/modalStore";
 
-export function Modal({ clickedFood }) {
-  const { open, setOpen: onClose } = useModalStore();
+export function Modal() {
+  const { open, setOpen: onClose, food } = useModalStore();
 
   const ref = useOutsideClick(onClose);
 
@@ -13,22 +13,18 @@ export function Modal({ clickedFood }) {
         <div ref={ref} className="modal">
           <div className="flex flex-col gap-y-2">
             <div className="flex justify-between border-b border-stone-500 p-1">
-              <h1>{clickedFood.title}</h1>
+              <h1>{food.title}</h1>
               <XMarkIcon className="w-5 cursor-pointer" onClick={onClose} />
             </div>
             <div className="flex flex-col gap-y-1">
               <div className="w-full rounded-md overflow-hidden">
-                <img
-                  src={clickedFood.image}
-                  alt={clickedFood.title}
-                  className="w-full"
-                />
+                <img src={food.image} alt={food.title} className="w-full" />
               </div>
               <div className="flex justify-between">
-                <h2>{clickedFood.category}</h2>
-                <div>{clickedFood.price} kr</div>
+                <h2>{food.category}</h2>
+                <div>{food.price} kr</div>
               </div>
-              <div className="text-k-lightBrown">{clickedFood.ingredient}</div>
+              <div className="text-k-lightBrown">{food.ingredient}</div>
             </div>
           </div>
         </div>

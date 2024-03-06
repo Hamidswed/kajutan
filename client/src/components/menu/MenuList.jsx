@@ -12,7 +12,6 @@ export function MenuList() {
   const { data: categories } = useCategory();
   const [searchItem, setSearchItem] = useState("");
   const [filteredData, setFilteredData] = useState([]);
-  const [clickedFood, setClickedFood] = useState({});
 
   useEffect(() => {
     setFilteredData(
@@ -36,13 +35,9 @@ export function MenuList() {
         ) : (
           searchItem !== "" && (
             <div className="w-full min-[400px]:w-full md:max-w-screen-md">
-              <Table
-                filteredData={filteredData}
-                searchItem={searchItem}
-                setClickedFood={setClickedFood}
-              />
+              <Table filteredData={filteredData} searchItem={searchItem} />
             </div>
-          ) //
+          )
         )}
         {searchItem === "" &&
           categories?.map((category) => {
@@ -51,13 +46,12 @@ export function MenuList() {
                 key={category._id}
                 category={category}
                 foods={foods}
-                setClickedFood={setClickedFood}
               />
             );
           })}
       </div>
       {/* modal */}
-      <Modal clickedFood={clickedFood} />
+      <Modal />
       <div className="h-20"></div>
     </div>
   );

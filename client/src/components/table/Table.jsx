@@ -1,7 +1,7 @@
 import useModalStore from "../../store/modalStore";
 
-export function Table({ filteredData, setClickedFood }) {
-  const { open, setOpen } = useModalStore();
+export function Table({ filteredData }) {
+  const { setOpen, setFood } = useModalStore();
 
   return (
     <div className="overflow-x-auto">
@@ -18,7 +18,7 @@ export function Table({ filteredData, setClickedFood }) {
             filteredData?.map((food) => {
               const openModalHandler = () => {
                 setOpen();
-                setClickedFood(food);
+                setFood(food);
               };
               return (
                 <tr

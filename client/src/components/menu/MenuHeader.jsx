@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MenuItem } from "./MenuItem";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
-export function MenuHeader({ category, foods, setClickedFood }) {
+export function MenuHeader({ category, foods }) {
   const [open, setOpen] = useState(false);
 
   const numOfFood = foods?.filter(
@@ -79,7 +79,6 @@ export function MenuHeader({ category, foods, setClickedFood }) {
                 <MenuItem
                   key={food._id}
                   food={food}
-                  setClickedFood={setClickedFood}
                   openMenu={() => setOpen(!open)}
                 />
               )
