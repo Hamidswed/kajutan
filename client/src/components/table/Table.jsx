@@ -1,9 +1,7 @@
-export function Table({ filteredData, searchItem, setClickedFood, onOpen }) {
-  // const found = filteredData.map((item) =>
-  //   item.menu.filter((food) =>
-  //     food.title.toLowerCase().includes(searchItem.toLowerCase())
-  //   )
-  // );
+import useModalStore from "../../store/modalStore";
+
+export function Table({ filteredData, setClickedFood }) {
+  const { open, setOpen } = useModalStore();
 
   return (
     <div className="overflow-x-auto">
@@ -12,7 +10,6 @@ export function Table({ filteredData, searchItem, setClickedFood, onOpen }) {
           <tr>
             <th>#</th>
             <th>Titeln</th>
-            {/* <th>Kategori</th> */}
             <th>kr</th>
           </tr>
         </thead>
@@ -20,7 +17,7 @@ export function Table({ filteredData, searchItem, setClickedFood, onOpen }) {
           {filteredData?.length !== 0 &&
             filteredData?.map((food) => {
               const openModalHandler = () => {
-                onOpen();
+                setOpen();
                 setClickedFood(food);
               };
               return (
@@ -39,7 +36,6 @@ export function Table({ filteredData, searchItem, setClickedFood, onOpen }) {
                       {food.category}
                     </span>
                   </td>
-                  {/* <td className="text-k-brown">{food.category}</td> */}
                   <td>{food.price}</td>
                 </tr>
               );

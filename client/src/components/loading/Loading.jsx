@@ -1,10 +1,17 @@
-export function Loading() {
+import { ThreeDots } from "react-loader-spinner";
+
+export function Loading({ width = "75", height = "40" }) {
   return (
-    <div className="text-white space-x-2">
-      <i className="fas fa-spinner fa-spin fa-xl" />
-      <span>
-        <em>Loading...</em>
-      </span>
-    </div>
+    <ThreeDots
+      height={height}
+      width={width}
+      radius={9}
+      color="#926b48"
+      wrapperClass={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+      visible={true}
+    />
   );
 }

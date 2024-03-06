@@ -1,28 +1,22 @@
 import { useEffect, useState } from "react";
-import { useFetch } from "../../hook/useFetch";
 import { Search } from "../search/Search";
 import { MenuHeader } from "./MenuHeader";
 import { Table } from "../table/Table";
 import { Modal } from "./Modal";
 import { Loading } from "../loading/Loading";
-import { BASE_URL } from "../../App";
+import useMenu from "../../hook/useMenu";
+import useCategory from "../../hook/useCategory";
 
 export function MenuList() {
-  const CATEGORY_URL = `${BASE_URL}/categories`;
-  const FOOD_URL = `${BASE_URL}/foods`;
-
-  const { data: categories, isLoading: categoryLoading } =
-    useFetch(CATEGORY_URL);
-  const { data: foods, isLoading } = useFetch(FOOD_URL);
-
+  const { data: foods, isLoading } = useMenu();
+  const { data: categories } = useCategory();
   const [searchItem, setSearchItem] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [clickedFood, setClickedFood] = useState({});
-  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     setFilteredData(
-      foods.filter((item) =>
+      foods?.filter((item) =>
         item.title.toLowerCase().includes(searchItem.toLowerCase())
       )
     );
@@ -35,7 +29,7 @@ export function MenuList() {
       <Search searchItem={searchItem} setSearchItem={setSearchItem} />
       {/* menu */}
       <div className="flex flex-col gap-y-2 sm:gap-y-3 lg:gap-y-4 items-center justify-center">
-        {filteredData.length === 0 ? (
+        {filteredData?.length === 0 ? (
           <p className="text-white w-full flex justify-center mb-3">
             Inget hittat!
           </p>
@@ -46,30 +40,24 @@ export function MenuList() {
                 filteredData={filteredData}
                 searchItem={searchItem}
                 setClickedFood={setClickedFood}
-                onOpen={() => setOpenModal(true)}
               />
             </div>
           ) //
         )}
         {searchItem === "" &&
-          categories.map((category) => {
+          categories?.map((category) => {
             return (
               <MenuHeader
                 key={category._id}
                 category={category}
                 foods={foods}
-                onOpen={()=>setOpenModal(true)}
                 setClickedFood={setClickedFood}
               />
             );
           })}
       </div>
       {/* modal */}
-      <Modal
-        openModal={openModal}
-        clickedFood={clickedFood}
-        onClose={() => setOpenModal(false)}
-      />
+      <Modal clickedFood={clickedFood} />
       <div className="h-20"></div>
     </div>
   );

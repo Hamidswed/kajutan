@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import http from "../services/httpServices";
 
-// const BASE_URL = "http://localhost:8001/foods/";
-// const BASE_URL = "/server/db.json";
 
-export function useFetch(BASE_URL) {
+export function useFetch(endpoint) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -12,7 +11,7 @@ export function useFetch(BASE_URL) {
     async function fetchData() {
       try {
         setIsLoading(true);
-        const { data } = await axios.get(BASE_URL);
+        const { data } = await http.get(endpoint);
         setData(data);
       } catch (error) {
         setData([]);

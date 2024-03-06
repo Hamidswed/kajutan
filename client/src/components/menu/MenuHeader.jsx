@@ -2,10 +2,10 @@ import { useState } from "react";
 import { MenuItem } from "./MenuItem";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
-export function MenuHeader({ category, foods, onOpen, setClickedFood }) {
+export function MenuHeader({ category, foods, setClickedFood }) {
   const [open, setOpen] = useState(false);
 
-  const numOfFood = foods.filter(
+  const numOfFood = foods?.filter(
     (food) => food.category === category.main_title
   );
 
@@ -47,7 +47,7 @@ export function MenuHeader({ category, foods, onOpen, setClickedFood }) {
                   : "bg-k-brown w-5 h-5 text-xs rounded-full text-white top-2 right-2 flex justify-center items-center"
               }`}
             >
-              {numOfFood.length}
+              {0 || numOfFood?.length}
             </span>
           </p>
           <p
@@ -79,7 +79,6 @@ export function MenuHeader({ category, foods, onOpen, setClickedFood }) {
                 <MenuItem
                   key={food._id}
                   food={food}
-                  onOpen={onOpen}
                   setClickedFood={setClickedFood}
                   openMenu={() => setOpen(!open)}
                 />

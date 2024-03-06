@@ -1,16 +1,16 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useOutsideClick } from "../../hook/useOutsideClick";
+import useModalStore from "../../store/modalStore";
 
-export function Modal({ openModal, onClose, clickedFood }) {
+export function Modal({ clickedFood }) {
+  const { open, setOpen: onClose } = useModalStore();
+
   const ref = useOutsideClick(onClose);
 
   return (
-    openModal && (
+    open && (
       <div className="backdrop-blur-sm fixed top-0 left-0 w-full h-screen bg-neutral-700/20 z-30">
-        <div
-          ref={ref}
-          className="modal"
-        >
+        <div ref={ref} className="modal">
           <div className="flex flex-col gap-y-2">
             <div className="flex justify-between border-b border-stone-500 p-1">
               <h1>{clickedFood.title}</h1>
