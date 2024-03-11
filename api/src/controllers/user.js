@@ -2,18 +2,23 @@ import User from "../models/User.js";
 import UserServices from "../services/user.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import bcrypt from "bcrypt";
 
 dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
 export const createUser = async (req, res) => {
-  const { firstName, lastName, email, password, role } = req.body;
   try {
+    const { firstName, lastName, email, password, role } = req.body;
+
+    const saltRounds = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+
     const newUser = new User({
       firstName,
       lastName,
       email,
-      password,
+      password: hashedPassword,
       role,
     });
     const user = await UserServices.createUser(newUser);
@@ -42,11 +47,19 @@ export const getAllUsers = async (req, res) => {
 };
 
 export const loginWithPassword = async (req, res) => {
-  const email = req.body.email;
   try {
+    const email = req.body.email;
     const userData = await UserServices.findUserByEmail(email);
     if (!userData) {
       res.json({ message: `Can't find user ${email}` });
+      return;
+    }
+
+    const passwordFromForm = req.body.password;
+    const passwordFromDB = userData.password;
+    const match = await bcrypt.compare(passwordFromForm, passwordFromDB);
+    if (!match) {
+      res.json({ message: "Email or Password is incorecct!" });
       return;
     }
 
