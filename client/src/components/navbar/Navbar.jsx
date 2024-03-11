@@ -5,12 +5,15 @@ import {
   InformationCircleIcon,
   ListBulletIcon,
   PhoneIcon,
+  UserIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Logo } from "./Logo";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { value, id } = JSON.parse(localStorage.getItem("token")) || {};
+  console.log(value, "value in navbar");
 
   return (
     <div className="container px-5 mx-auto flex gap-x-4 justify-between items-center mt-8">
@@ -73,14 +76,33 @@ export function Navbar() {
                 <span>Kontakta oss</span>
               </Link>
             </li>
+            {value && (
+              <li
+                className="hover:text-k-brown p-2"
+                onClick={() => setIsOpen(false)}
+              >
+                <Link to={`/admin`} className="flex items-center gap-x-2">
+                  <UserIcon className="w-5" />
+                  <span>Admin</span>
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
 
       {/* menu in desktop */}
-      <div className="hidden md:block flex-1 translate-y-8 ">
-        <ul className="flex justify-end gap-x-4 text-white">
-          <li className="hover:text-k-brown p-2">
+      <div className="hidden md:block flex-1 translate-y-8">
+        <ul className="flex justify-end gap-x-4 text-white items-center">
+          <li className="hover:text-k-brown p-2 flex items-center">
+            {value && (
+              <Link
+                to={`/admin`}
+                className="flex items-center gap-x-2 hover:text-k-brown p-2"
+              >
+                <UserIcon className="w-5" />
+              </Link>
+            )}
             <Link to="/">Hem</Link>
           </li>
           <li className="hover:text-k-brown p-2">
@@ -103,7 +125,6 @@ export function Navbar() {
           <li className="hover:text-k-brown p-2">
             <Link to="/menu">Meny</Link>
           </li>
-
           <li className="hover:text-k-brown p-2">
             <Link to="/contact">Kontakta oss</Link>
           </li>

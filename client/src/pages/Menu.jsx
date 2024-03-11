@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import { MenuList } from "../components/menu/MenuList";
 
 export function Menu() {
@@ -6,7 +7,7 @@ export function Menu() {
       <h2 className="font-yellotail text-3xl text-white mt-24 md:text-4xl lg:text-5xl lg:mt-32">
         Kajutan
       </h2>
-      <MenuList />
+      <Outlet/>
     </div>
   );
 }

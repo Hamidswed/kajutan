@@ -50,3 +50,9 @@ table td{
   padding: 1rem;
   color: #fff;
 }
+
+input{
+  border-radius: .375rem;
+  padding: .5rem;
+  color: #926b48;
+}
