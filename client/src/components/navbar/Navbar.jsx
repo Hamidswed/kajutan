@@ -7,13 +7,14 @@ import {
   PhoneIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
+import useGetTokenFromLS from "../../util/getToken";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { value, id } = JSON.parse(localStorage.getItem("token")) || {};
-  console.log(value, "value in navbar");
+
+  const { value } = useGetTokenFromLS();
 
   return (
     <div className="container px-5 mx-auto flex gap-x-4 justify-between items-center mt-8">
@@ -76,17 +77,22 @@ export function Navbar() {
                 <span>Kontakta oss</span>
               </Link>
             </li>
-            {value && (
-              <li
-                className="hover:text-k-brown p-2"
-                onClick={() => setIsOpen(false)}
-              >
+            <li
+              className="hover:text-k-brown p-2"
+              onClick={() => setIsOpen(false)}
+            >
+              {value ? (
                 <Link to={`/admin`} className="flex items-center gap-x-2">
                   <UserIcon className="w-5" />
                   <span>Admin</span>
                 </Link>
-              </li>
-            )}
+              ) : (
+                <Link to={`/login`} className="flex items-center gap-x-2">
+                  <UserIcon className="w-5" />
+                  <span>Logga in</span>
+                </Link>
+              )}
+            </li>
           </ul>
         </div>
       </div>
@@ -94,15 +100,15 @@ export function Navbar() {
       {/* menu in desktop */}
       <div className="hidden md:block flex-1 translate-y-8">
         <ul className="flex justify-end gap-x-4 text-white items-center">
+          <li
+            className={`hover:bg-k-lightBrown p-2 bg-k-brown rounded-full text-sm
+            }`}
+          >
+            <Link to="/admin" className="flex items-center gap-x-2">
+              <UserIcon className="w-4" />
+            </Link>
+          </li>
           <li className="hover:text-k-brown p-2 flex items-center">
-            {value && (
-              <Link
-                to={`/admin`}
-                className="flex items-center gap-x-2 hover:text-k-brown p-2"
-              >
-                <UserIcon className="w-5" />
-              </Link>
-            )}
             <Link to="/">Hem</Link>
           </li>
           <li className="hover:text-k-brown p-2">

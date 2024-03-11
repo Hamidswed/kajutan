@@ -23,28 +23,31 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  const { isPending, error, data, mutateAsync } = useMutation({
+  const { isPending, mutateAsync } = useMutation({
     mutationFn: userLogin,
   });
 
   const mySubmit = async (dataForm) => {
-    console.log(dataForm, "submit");
     try {
-      const { userData, token } = await mutateAsync(dataForm);
+      const data = await mutateAsync(dataForm);
+
+      if (data.message) {
+        toast.error(data.message);
+        return;
+      }
+      const { userData, token } = data;
       const expiry = new Date().getTime() + 24 * 60 * 60 * 1000; // 1 day in milliseconds
       localStorage.setItem(
         "token",
         JSON.stringify({ value: token, expiry: expiry, id: userData._id })
       );
       clearTokenFromLocalStorage();
-      console.log(userData, token);
       if (userData) {
         toast.success("Log in successfully!");
         navigate(`/admin`);
         return;
       }
     } catch (error) {
-      console.log(error);
       toast.error(error);
     }
   };
@@ -70,9 +73,14 @@ export default function Login() {
         <input
           className="w-full"
           type="password"
-          {...register("password")}
+          {...register("password", { required: "Required" })}
           placeholder="password"
         />
+        {errors && errors.password && (
+          <span className="block text-sm text-white">
+            {errors.password.message}
+          </span>
+        )}
         <button
           type="submit"
           className="bg-k-lightBrown w-full p-2 rounded-md flex justify-center"
