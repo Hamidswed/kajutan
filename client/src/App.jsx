@@ -13,11 +13,10 @@ import LoginUser from "./pages/LoginUser";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./components/HOC/ProtectedRoute";
 import Admin from "./pages/Admin";
-import AdminPanel from "./components/admin/AdminPanel";
 
 const queryClient = new QueryClient();
-
 function App() {
+
   return (
     <QueryClientProvider client={queryClient}>
       <Toaster />

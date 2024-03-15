@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import { Navigate, Outlet } from "react-router-dom";
+import clearTokenFromLocalStorage from "../../util/clearToken";
 
 const ProtectedRoute = () => {
+  
+  useEffect(() => {
+    clearTokenFromLocalStorage();
+  }, []);
+
   const token = JSON.parse(localStorage.getItem("token"));
 
   if (!token) {

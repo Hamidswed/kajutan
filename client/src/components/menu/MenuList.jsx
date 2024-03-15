@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Search } from "../search/Search";
 import { MenuHeader } from "./MenuHeader";
-import { Table } from "../table/Table";
 import { Modal } from "./Modal";
 import { Loading } from "../loading/Loading";
 import useMenu from "../../hook/useMenu";
 import useCategory from "../../hook/useCategory";
+import MenuTable from "./MenuTable";
 
 export function MenuList() {
   const { data: foods, isLoading } = useMenu();
@@ -23,7 +23,7 @@ export function MenuList() {
 
   if (isLoading) return <Loading />;
   return (
-    <div className="px-4 mt-5 flex flex-col gap-y-4 items-center">
+    <div className="px-4 mt-5 flex flex-col gap-y-4 items-center pb-24">
       {/* search */}
       <Search searchItem={searchItem} setSearchItem={setSearchItem} />
       {/* menu */}
@@ -35,7 +35,7 @@ export function MenuList() {
         ) : (
           searchItem !== "" && (
             <div className="w-full min-[400px]:w-full md:max-w-screen-md">
-              <Table filteredData={filteredData} searchItem={searchItem} />
+              <MenuTable filteredData={filteredData} />
             </div>
           )
         )}
@@ -52,7 +52,6 @@ export function MenuList() {
       </div>
       {/* modal */}
       <Modal />
-      <div className="h-20"></div>
     </div>
   );
 }

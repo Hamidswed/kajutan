@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Kajutan from "../../assets/kajutan.jpg";
 import { MapPinIcon } from "@heroicons/react/16/solid";
+import { useEffect } from "react";
+import clearTokenFromLocalStorage from "../../util/clearToken";
 
 export function Body() {
   return (
