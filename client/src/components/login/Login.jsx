@@ -5,8 +5,13 @@ import toast from "react-hot-toast";
 import { Loading } from "../loading/Loading";
 import { useNavigate } from "react-router-dom";
 import clearTokenFromLocalStorage from "../../util/clearToken";
+import { useEffect } from "react";
 
 export default function Login() {
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("token"));
+    if (token) navigate("/");
+  }, []);
   const {
     register,
     formState: { errors },
