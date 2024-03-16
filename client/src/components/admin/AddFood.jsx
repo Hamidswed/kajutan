@@ -6,9 +6,9 @@ import useModalStore from "../../store/modalStore";
 import useAddFood from "../../hook/useAddFood";
 import useEditFood from "../../hook/useEditFood";
 
-export default function AddFood() {
-  const { food: foodToEdit } = useModalStore();
-  console.log(foodToEdit, "food");
+export default function AddFood({foodToEdit={}}) {
+  // const { food: foodToEdit } = useModalStore();
+
   const { _id: editId } = foodToEdit;
   console.log(editId, "edit id");
   const isEditSession = Boolean(editId);

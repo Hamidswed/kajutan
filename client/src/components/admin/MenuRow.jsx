@@ -21,13 +21,13 @@ export default function MenuRow({ food }) {
         <span className="text-k-brown text-xs">{food.category}</span>
       </td>
       <td>{food.price}</td>
-      <td className="space-y-2 sm:space-x-2">
+      <td className="sm:space-x-2">
         <button onClick={editHandler}>
           <PencilIcon className="w-3 sm:w-4 md:w-5" />
         </button>
         <Modal open={openEdit} onClose={setOpenEdit}>
           {/* <FoodCard food={food} /> */}
-          <AddFood/>
+          <AddFood foodToEdit={food} />
         </Modal>
         <button>
           <TrashIcon className="w-3 sm:w-4 md:w-5 text-red-600" />

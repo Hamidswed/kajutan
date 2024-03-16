@@ -8,7 +8,7 @@ import MenuTable from "./MenuTable";
 
 export default function MenuManagment({ optionHandler, option }) {
   const { setOpen, open } = useModalStore();
-  const { data:foods, isLoading } = useMenu();
+  const { data: foods, isLoading } = useMenu();
   const { data: categories } = useCategory();
 
   const filteredData = foods?.filter((item) => item.category === option);
@@ -16,7 +16,7 @@ export default function MenuManagment({ optionHandler, option }) {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="w-full min-[400px]:w-full md:max-w-screen-md space-y-4">
+    <div className="w-full min-[400px]:w-full md:max-w-screen-md">
       <div className="w-full flex flex-col items-center gap-y-5 md:flex-row md:justify-between md:items-center">
         <form className="flex justify-between items-center max-w-[300px] gap-x-4 order-2">
           <label htmlFor="menu">Filter</label>

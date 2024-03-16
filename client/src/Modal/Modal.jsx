@@ -1,5 +1,4 @@
 import { useOutsideClick } from "../hook/useOutsideClick";
-import useModalStore from "../store/modalStore";
 
 export default function Modal({ open, children, onClose }) {
   const ref = useOutsideClick(onClose);
