@@ -21,10 +21,15 @@ const createFood = async (food) => {
   return food.save();
 };
 
+const updateFoodById = async (id, update) => {
+  return Food.findByIdAndUpdate(id, update, { new: true });
+};
+
 export default {
   createFood,
   createCategory,
   findCategoryByName,
   getCategories,
   getFoods,
+  updateFoodById,
 };

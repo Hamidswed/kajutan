@@ -71,3 +71,15 @@ export const deleteFoodById = async (req, res) => {
     res.json(error);
   }
 };
+
+export const updateFoodById = async (req, res) => {
+  const foodId = req.params.id;
+  const newFoodInfo = req.body;
+  try {
+    const updatedUser = await FoodServices.updateFoodById(foodId, newFoodInfo);
+    res.json(updatedUser);
+  } catch (error) {
+    res.json(error);
+  }
+};
+
