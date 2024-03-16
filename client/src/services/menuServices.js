@@ -5,7 +5,12 @@ export async function getFoods() {
   return data;
 }
 
-export async function addFood(food){
-  const {data} = await http.post("/foods",food)
-  return data
+export async function addFood(food) {
+  const { data } = await http.post("/foods", food);
+  return data;
+}
+
+export async function editFood({ id, newFood }) {
+  const { data } = await http.patch(`/foods/update/${id}`, newFood);
+  return data;
 }

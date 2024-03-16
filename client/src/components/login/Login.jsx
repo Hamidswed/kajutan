@@ -11,6 +11,7 @@ export default function Login() {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm();
 
   const validationSchema = {
@@ -33,6 +34,7 @@ export default function Login() {
 
       if (data.message) {
         toast.error(data.message);
+        reset();
         return;
       }
       const { userData, token } = data;
@@ -43,7 +45,7 @@ export default function Login() {
       );
       clearTokenFromLocalStorage();
       if (userData) {
-        toast.success("Log in successfully!");
+        toast.success(`Welcome to Admin Panel`);
         navigate(`/admin`);
         return;
       }

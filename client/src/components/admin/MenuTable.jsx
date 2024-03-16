@@ -12,8 +12,8 @@ export default function MenuTable({ filteredData }) {
       </Table.Header>
       <Table.Body>
         {filteredData?.length !== 0 &&
-          filteredData?.map((food,index) => {
-            return <MenuRow key={food._id} food={food} index={index}/>;
+          filteredData?.map((food) => {
+            return <MenuRow key={food._id} food={food} />;
           })}
       </Table.Body>
     </Table>

@@ -8,48 +8,48 @@ import MenuTable from "./MenuTable";
 
 export default function MenuManagment({ optionHandler, option }) {
   const { setOpen, open } = useModalStore();
-  const { data, isLoading } = useMenu();
+  const { data:foods, isLoading } = useMenu();
   const { data: categories } = useCategory();
 
-  const filteredData = data?.filter((item) => item.category === option);
+  const filteredData = foods?.filter((item) => item.category === option);
 
   if (isLoading) return <Loading />;
 
   return (
     <div className="w-full min-[400px]:w-full md:max-w-screen-md space-y-4">
-      <div>
+      <div className="w-full flex flex-col items-center gap-y-5 md:flex-row md:justify-between md:items-center">
+        <form className="flex justify-between items-center max-w-[300px] gap-x-4 order-2">
+          <label htmlFor="menu">Filter</label>
+          <select
+            id="menu"
+            className="bg-transparent border border-k-lightBrown rounded-md py-2"
+            onChange={optionHandler}
+          >
+            <option className="bg-neutral-800">All</option>
+            {categories?.map((category) => {
+              return (
+                <option
+                  key={category._id}
+                  value={category.main_title}
+                  className="bg-neutral-800"
+                >
+                  {category.main_title}
+                </option>
+              );
+            })}
+          </select>
+        </form>
         <button
-          className="flex gap-x-2 bg-k-brown px-4 py-2 rounded-md w-full justify-center items-center"
+          className="flex gap-x-2 bg-k-brown px-4 py-2 rounded-md w-full justify-center items-center max-w-[300px]"
           onClick={setOpen}
         >
           Add food
         </button>
-        <Modal open={open} onClose={setOpen}>
-          <AddFood />
-        </Modal>
       </div>
-      <form className="flex justify-between max-w-[300px] mx-auto gap-x-2">
-        <label htmlFor="menu">Filter</label>
-        <select
-          id="menu"
-          className="bg-transparent border border-k-lightBrown rounded-md"
-          onChange={optionHandler}
-        >
-          <option className="bg-neutral-800">All</option>
-          {categories?.map((category) => {
-            return (
-              <option
-                key={category._id}
-                value={category.main_title}
-                className="bg-neutral-800"
-              >
-                {category.main_title}
-              </option>
-            );
-          })}
-        </select>
-      </form>
-      <MenuTable filteredData={option === "All" ? data : filteredData} />
+      <Modal open={open} onClose={setOpen}>
+        <AddFood />
+      </Modal>
+      <MenuTable filteredData={option === "All" ? foods : filteredData} />
     </div>
   );
 }

@@ -1,44 +1,77 @@
-import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
-import { addFood } from "../../services/menuServices";
-import toast from "react-hot-toast";
 import useCategory from "../../hook/useCategory";
 import { Loading } from "../loading/Loading";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import useModalStore from "../../store/modalStore";
+import useAddFood from "../../hook/useAddFood";
+import useEditFood from "../../hook/useEditFood";
 
 export default function AddFood() {
+  const { food: foodToEdit } = useModalStore();
+  console.log(foodToEdit, "food");
+  const { _id: editId } = foodToEdit;
+  console.log(editId, "edit id");
+  const isEditSession = Boolean(editId);
+  const { title, price, ingredient, category, image } = foodToEdit;
+  let editValue = {};
+  if (isEditSession) {
+    editValue = {
+      title,
+      price,
+      ingredient,
+      category,
+      image,
+    };
+  }
   const { setOpen } = useModalStore();
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({ defaultValues: editValue });
+
   const { data: categories, isLoading } = useCategory();
-  const { isPending, mutateAsync } = useMutation({
-    mutationFn: addFood,
-  });
+  const { isPending, createFood } = useAddFood();
+  const { isPending: isEditing, editFood } = useEditFood();
 
   const mySubmit = async (food) => {
     try {
-      const data = await mutateAsync(food);
-      if (data.message) {
-        toast.error(data.message);
-        return;
+      if (isEditSession) {
+        editFood(
+          { id: editId, food },
+          {
+            onSuccess: () => {
+              setOpen();
+              reset();
+            },
+          }
+        );
+      } else {
+        createFood(food, {
+          onSuccess: () => {
+            setOpen();
+            reset();
+          },
+        });
       }
-      if (data) {
-        toast.success(`${data.title} is added successfully!`);
-        reset();
-        return;
-      }
-      console.log(data);
+      // const data = await mutateAsync(food);
+      // if (data.message) {
+      //   toast.error(data.message);
+      //   return;
+      // }
+      // if (data) {
+      //   toast.success(`${data.title} is added successfully!`);
+      //   reset();
+      //   return;
+      // }
+      console.log(food);
     } catch (error) {
       console.log(error);
     }
   };
   return (
-    <div className="divide-yellow-900">
+    <div className="divide-gray-900">
       <div className="text-black flex justify-between">
         <h1>Add food</h1>
         <XMarkIcon className="w-5" onClick={setOpen} />
