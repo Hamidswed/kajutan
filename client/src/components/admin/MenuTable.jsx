@@ -8,7 +8,7 @@ export default function MenuTable({ filteredData }) {
         <th>#</th>
         <th>Titeln</th>
         <th>kr</th>
-        <th>...</th>
+        <th className="text-center">...</th>
       </Table.Header>
       <Table.Body>
         {filteredData?.length !== 0 &&

@@ -1,13 +1,17 @@
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 import useModalStore from "../../store/modalStore";
 import Table from "../table/Table";
-import Modal from "../../Modal/Modal";
+import Modal from "../../ui/Modal";
 import AddFood from "./AddFood";
+import { useState } from "react";
+import ConfirmDelete from "../../ui/ConfirmDelete";
 
 export default function MenuRow({ food }) {
-  const { openEdit, setOpenEdit, setFood } = useModalStore();
+  const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+  const { setOpen, setFood } = useModalStore();
   const editHandler = () => {
-    setOpenEdit();
+    setOpen();
     setFood(food);
   };
   return (
@@ -21,17 +25,27 @@ export default function MenuRow({ food }) {
         <span className="text-k-brown text-xs">{food.category}</span>
       </td>
       <td>{food.price}</td>
-      <td className="sm:space-x-2">
-        <button onClick={editHandler}>
+      <td className="min-[480px]:space-x-1 sm:space-x-2 text-center">
+        <button onClick={() => setIsEditOpen(true)}>
           <PencilIcon className="w-3 sm:w-4 md:w-5" />
         </button>
-        <Modal open={openEdit} onClose={setOpenEdit}>
-          {/* <FoodCard food={food} /> */}
-          <AddFood foodToEdit={food} />
+        <Modal
+          open={isEditOpen}
+          onClose={() => setIsEditOpen(false)}
+          title="Edit"
+        >
+          <AddFood foodToEdit={food} onClose={() => setIsEditOpen(false)} />
         </Modal>
-        <button>
+        <button onClick={() => setIsDeleteOpen(true)}>
           <TrashIcon className="w-3 sm:w-4 md:w-5 text-red-600" />
         </button>
+        <Modal
+          open={isDeleteOpen}
+          onClose={() => setIsDeleteOpen(false)}
+          title={`Delete ${food.title}`}
+        >
+          <ConfirmDelete resourceName={food.title} />
+        </Modal>
       </td>
     </Table.Row>
   );

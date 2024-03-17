@@ -6,8 +6,7 @@ import useModalStore from "../../store/modalStore";
 import useAddFood from "../../hook/useAddFood";
 import useEditFood from "../../hook/useEditFood";
 
-export default function AddFood({foodToEdit={}}) {
-  // const { food: foodToEdit } = useModalStore();
+export default function AddFood({ foodToEdit={}, onClose }) {
 
   const { _id: editId } = foodToEdit;
   console.log(editId, "edit id");
@@ -23,7 +22,6 @@ export default function AddFood({foodToEdit={}}) {
       image,
     };
   }
-  const { setOpen } = useModalStore();
   const {
     register,
     handleSubmit,
@@ -33,16 +31,16 @@ export default function AddFood({foodToEdit={}}) {
 
   const { data: categories, isLoading } = useCategory();
   const { isPending, createFood } = useAddFood();
-  const { isPending: isEditing, editFood } = useEditFood();
+  const { isPending: isEditing, updateFood } = useEditFood();
 
   const mySubmit = async (food) => {
     try {
       if (isEditSession) {
-        editFood(
+        updateFood(
           { id: editId, food },
           {
             onSuccess: () => {
-              setOpen();
+              onClose();
               reset();
             },
           }
@@ -50,21 +48,11 @@ export default function AddFood({foodToEdit={}}) {
       } else {
         createFood(food, {
           onSuccess: () => {
-            setOpen();
+            onClose();
             reset();
           },
         });
       }
-      // const data = await mutateAsync(food);
-      // if (data.message) {
-      //   toast.error(data.message);
-      //   return;
-      // }
-      // if (data) {
-      //   toast.success(`${data.title} is added successfully!`);
-      //   reset();
-      //   return;
-      // }
       console.log(food);
     } catch (error) {
       console.log(error);
@@ -72,10 +60,6 @@ export default function AddFood({foodToEdit={}}) {
   };
   return (
     <div className="divide-gray-900">
-      <div className="text-black flex justify-between">
-        <h1>Add food</h1>
-        <XMarkIcon className="w-5" onClick={setOpen} />
-      </div>
       <form
         action=""
         className="flex flex-col gap-y-3 mt-4"
@@ -105,7 +89,7 @@ export default function AddFood({foodToEdit={}}) {
         )}
         <select
           id="menu"
-          className="bg-transparent border border-gray-400 py-2 rounded-md text-gray-400"
+          className="bg-transparent border border-gray-400 py-2 px-1 rounded-md text-gray-400"
           {...register("category", { required: "Required" })}
         >
           {/* <option className="bg-neutral-800 ">Select category</option> */}
@@ -144,8 +128,12 @@ export default function AddFood({foodToEdit={}}) {
           </span>
         )}
 
-        <button className="bg-k-brown w-full py-2 rounded-md">
-          {isPending ? <Loading /> : "Submit"}
+        <button className="bg-k-brown w-full py-2 rounded-md flex justify-center">
+          {isPending || isEditing ? (
+            <Loading height="25" color="bg-black" />
+          ) : (
+            "Submit"
+          )}
         </button>
       </form>
     </div>

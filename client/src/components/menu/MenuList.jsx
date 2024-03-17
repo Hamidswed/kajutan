@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Search } from "../search/Search";
 import { MenuHeader } from "./MenuHeader";
-import { Modal } from "./Modal";
 import { Loading } from "../loading/Loading";
 import useMenu from "../../hook/useMenu";
 import useCategory from "../../hook/useCategory";
 import MenuTable from "./MenuTable";
+import FoodCard from "./FoodCard";
+import Modal from "../../ui/Modal";
 
 export function MenuList() {
   const { data: foods, isLoading } = useMenu();
@@ -51,7 +52,9 @@ export function MenuList() {
           })}
       </div>
       {/* modal */}
-      <Modal />
+      {/* <Modal open={isModalOpen} onClose={()=>setIsModalOpen(false)}>
+        <FoodCard/>
+      </Modal> */}
     </div>
   );
 }

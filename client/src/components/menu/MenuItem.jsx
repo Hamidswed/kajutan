@@ -1,10 +1,14 @@
+import { useState } from "react";
 import useModalStore from "../../store/modalStore";
+import Modal from "../../ui/Modal";
+import FoodCard from "./FoodCard";
 
 export function MenuItem({ food }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { setOpen, setFood } = useModalStore();
 
   const openModalHandler = () => {
-    setOpen();
+    setIsModalOpen(true);
     setFood(food);
   };
 
@@ -25,6 +29,13 @@ export function MenuItem({ food }) {
           {food.price} <span className="text-sm">kr</span>
         </p>
       </div>
+      <Modal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={food.title}
+      >
+        <FoodCard food={food}/>
+      </Modal>
     </div>
   );
 }
