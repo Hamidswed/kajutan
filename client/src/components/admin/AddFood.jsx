@@ -1,17 +1,15 @@
 import { useForm } from "react-hook-form";
 import useCategory from "../../hook/useCategory";
 import { Loading } from "../loading/Loading";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import useModalStore from "../../store/modalStore";
 import useAddFood from "../../hook/useAddFood";
 import useEditFood from "../../hook/useEditFood";
+import toast from "react-hot-toast";
 
-export default function AddFood({ foodToEdit={}, onClose }) {
-
+export default function AddFood({ foodToEdit = {}, onClose }) {
   const { _id: editId } = foodToEdit;
-  console.log(editId, "edit id");
   const isEditSession = Boolean(editId);
   const { title, price, ingredient, category, image } = foodToEdit;
+
   let editValue = {};
   if (isEditSession) {
     editValue = {
@@ -22,6 +20,7 @@ export default function AddFood({ foodToEdit={}, onClose }) {
       image,
     };
   }
+
   const {
     register,
     handleSubmit,
@@ -33,11 +32,11 @@ export default function AddFood({ foodToEdit={}, onClose }) {
   const { isPending, createFood } = useAddFood();
   const { isPending: isEditing, updateFood } = useEditFood();
 
-  const mySubmit = async (food) => {
+  const mySubmit = (food) => {
     try {
       if (isEditSession) {
         updateFood(
-          { id: editId, food },
+          { id: editId, newFood: food },
           {
             onSuccess: () => {
               onClose();
@@ -53,9 +52,8 @@ export default function AddFood({ foodToEdit={}, onClose }) {
           },
         });
       }
-      console.log(food);
     } catch (error) {
-      console.log(error);
+      toast.error(error);
     }
   };
   return (
@@ -128,12 +126,8 @@ export default function AddFood({ foodToEdit={}, onClose }) {
           </span>
         )}
 
-        <button className="bg-k-brown w-full py-2 rounded-md flex justify-center">
-          {isPending || isEditing ? (
-            <Loading height="25" color="bg-black" />
-          ) : (
-            "Submit"
-          )}
+        <button className="bg-k-lightBrown w-full py-2 rounded-md flex justify-center">
+          {isPending || isEditing ? <Loading height="25" /> : "Submit"}
         </button>
       </form>
     </div>

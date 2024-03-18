@@ -5,8 +5,6 @@ import { Loading } from "../loading/Loading";
 import useMenu from "../../hook/useMenu";
 import useCategory from "../../hook/useCategory";
 import MenuTable from "./MenuTable";
-import FoodCard from "./FoodCard";
-import Modal from "../../ui/Modal";
 
 export function MenuList() {
   const { data: foods, isLoading } = useMenu();
@@ -23,10 +21,12 @@ export function MenuList() {
   }, [searchItem, foods]);
 
   if (isLoading) return <Loading />;
+
   return (
     <div className="px-4 mt-5 flex flex-col gap-y-4 items-center pb-24">
       {/* search */}
       <Search searchItem={searchItem} setSearchItem={setSearchItem} />
+
       {/* menu */}
       <div className="flex flex-col gap-y-2 sm:gap-y-3 lg:gap-y-4 items-center justify-center">
         {filteredData?.length === 0 ? (
@@ -51,10 +51,6 @@ export function MenuList() {
             );
           })}
       </div>
-      {/* modal */}
-      {/* <Modal open={isModalOpen} onClose={()=>setIsModalOpen(false)}>
-        <FoodCard/>
-      </Modal> */}
     </div>
   );
 }

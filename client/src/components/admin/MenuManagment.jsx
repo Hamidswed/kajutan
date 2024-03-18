@@ -6,9 +6,9 @@ import Modal from "../../ui/Modal";
 import { Loading } from "../loading/Loading";
 import AddFood from "./AddFood";
 import MenuTable from "./MenuTable";
+import FilterInput from "../../ui/FilterInput";
 
 export default function MenuManagment({ optionHandler, option }) {
-  // const { setOpen } = useModalStore();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { data: foods, isLoading } = useMenu();
   const { data: categories } = useCategory();
@@ -20,27 +20,7 @@ export default function MenuManagment({ optionHandler, option }) {
   return (
     <div className="w-full min-[400px]:w-full md:max-w-screen-md">
       <div className="w-full flex flex-col items-center gap-y-5 md:flex-row md:justify-between md:items-center">
-        <form className="flex justify-between items-center max-w-[300px] gap-x-10 order-2">
-          <label htmlFor="menu">Filter</label>
-          <select
-            id="menu"
-            className="bg-transparent border border-k-lightBrown rounded-md py-2 px-1 text-sm"
-            onChange={optionHandler}
-          >
-            <option className="bg-neutral-800">All</option>
-            {categories?.map((category) => {
-              return (
-                <option
-                  key={category._id}
-                  value={category.main_title}
-                  className="bg-neutral-800"
-                >
-                  {category.main_title}
-                </option>
-              );
-            })}
-          </select>
-        </form>
+        <FilterInput optionHandler={optionHandler} categories={categories} />
         <button
           className="flex gap-x-2 bg-k-brown px-4 py-2 rounded-md w-full justify-center items-center max-w-[300px]"
           onClick={() => setIsModalOpen(true)}

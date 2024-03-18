@@ -1,20 +1,13 @@
 import { useState } from "react";
-import useModalStore from "../../store/modalStore";
 import Modal from "../../ui/Modal";
 import FoodCard from "./FoodCard";
 
 export function MenuItem({ food }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { setOpen, setFood } = useModalStore();
-
-  const openModalHandler = () => {
-    setIsModalOpen(true);
-    setFood(food);
-  };
 
   return (
     <div
-      onClick={openModalHandler}
+      onClick={() => setIsModalOpen(!isModalOpen)}
       className="w-full flex justify-between items-center border-t border-k-xlightBrown rounded-md py-3 px-2 gap-x-3 lg:gap-x-6 cursor-pointer"
     >
       <div className="w-1/2 rounded-md overflow-hidden md:w-1/4 min-[510px]:w-1/3 lg:w-1/6">
@@ -31,10 +24,10 @@ export function MenuItem({ food }) {
       </div>
       <Modal
         open={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={() => setIsModalOpen(!isModalOpen)}
         title={food.title}
       >
-        <FoodCard food={food}/>
+        <FoodCard food={food} />
       </Modal>
     </div>
   );

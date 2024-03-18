@@ -5,15 +5,13 @@ import Modal from "../../ui/Modal";
 import AddFood from "./AddFood";
 import { useState } from "react";
 import ConfirmDelete from "../../ui/ConfirmDelete";
+import useRemoveFood from "../../hook/useRemoveFood";
 
 export default function MenuRow({ food }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
-  const { setOpen, setFood } = useModalStore();
-  const editHandler = () => {
-    setOpen();
-    setFood(food);
-  };
+  const { deleteFood, isDeleting } = useRemoveFood();
+
   return (
     <Table.Row key={food._id} className="cursor-pointer">
       <td className="w-1/4 p-1 min-[400px]:p-2 md:p-3 min-[450px]:w-[25%] min-[600px]:w-[20%] md:w-[15%]">
@@ -44,7 +42,13 @@ export default function MenuRow({ food }) {
           onClose={() => setIsDeleteOpen(false)}
           title={`Delete ${food.title}`}
         >
-          <ConfirmDelete resourceName={food.title} />
+          <ConfirmDelete
+            resourceName={food.title}
+            onClose={() => setIsDeleteOpen(false)}
+            onConfirm={()=>deleteFood(food._id, {
+              onSuccess: (data) => setIsDeleteOpen(false),
+            })}
+          />
         </Modal>
       </td>
     </Table.Row>

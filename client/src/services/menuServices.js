@@ -14,3 +14,8 @@ export async function editFood({ id, newFood }) {
   const { data } = await http.patch(`/foods/update/${id}`, newFood);
   return data;
 }
+
+export async function removeFood(id) {
+  const { data } = await http.delete(`/foods/${id}`);
+  return data;
+}

@@ -1,6 +1,5 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useOutsideClick } from "../hook/useOutsideClick";
-import useModalStore from "../store/modalStore";
 
 export default function Modal({ children, open, onClose, title }) {
   const ref = useOutsideClick(onClose);
@@ -10,7 +9,9 @@ export default function Modal({ children, open, onClose, title }) {
         <div ref={ref} className="modal divide-y divide-gray-500">
           <div className="text-black flex justify-between pb-2">
             <h1 className="font-bold">{title}</h1>
-            <XMarkIcon className="w-5 cursor-pointer" onClick={onClose} />
+            <button onClick={onClose}>
+              <XMarkIcon className="w-5 cursor-pointer" />
+            </button>
           </div>
           {children}
         </div>
