@@ -3,15 +3,15 @@ import FoodServices from "../services/food.js";
 import Food from "../models/Food.js";
 import Category from "../models/Category.js";
 
-let foodData = [];
+// let foodData = [];
 
-fs.readFile("./src/newDB.json", "utf8", (err, data) => {
-  if (err) {
-    console.error("Error reading JSON file:", err);
-    return;
-  }
-  foodData = JSON.parse(data);
-});
+// fs.readFile("./src/newDB.json", "utf8", (err, data) => {
+//   if (err) {
+//     console.error("Error reading JSON file:", err);
+//     return;
+//   }
+//   foodData = JSON.parse(data);
+// });
 
 export const getAllFoods = async (req, res) => {
   try {
@@ -64,9 +64,9 @@ export const createNewFood = async (req, res) => {
 
 export const deleteFoodById = async (req, res) => {
   try {
-    const foodId = req.params;
-    const result = foodList.filter((food) => food.id !== Number(foodId.id));
-    res.json(result);
+    const foodId = req.params.id;
+    const deletedFood = await FoodServices.deleteFoodById(foodId);
+    res.json(deletedFood);
   } catch (error) {
     res.json(error);
   }
@@ -82,4 +82,3 @@ export const updateFoodById = async (req, res) => {
     res.json(error);
   }
 };
-

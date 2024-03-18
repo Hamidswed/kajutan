@@ -25,6 +25,10 @@ const updateFoodById = async (id, update) => {
   return Food.findByIdAndUpdate(id, update, { new: true });
 };
 
+const deleteFoodById = async (id) => {
+  return Food.findByIdAndDelete(id);
+};
+
 export default {
   createFood,
   createCategory,
@@ -32,4 +36,5 @@ export default {
   getCategories,
   getFoods,
   updateFoodById,
+  deleteFoodById,
 };
