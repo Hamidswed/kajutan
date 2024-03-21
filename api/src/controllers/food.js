@@ -23,11 +23,12 @@ export const getAllFoods = async (req, res) => {
 };
 
 export const createNewCategory = async (req, res) => {
+  const { main_title, included, main_img } = req.body;
   try {
     const newCategory = new Category({
-      main_title: req.body.main_title,
-      included: req.body.included,
-      main_img: req.body.main_img,
+      main_title: main_title.toUpperCase(),
+      included,
+      main_img,
     });
     const category = await FoodServices.createCategory(newCategory);
     res.json(category);
@@ -49,11 +50,11 @@ export const createNewFood = async (req, res) => {
   const { title, price, ingredient, image, category } = req.body;
   try {
     const newFood = new Food({
-      title,
+      title: title.toUpperCase(),
       price,
       ingredient,
       image,
-      category,
+      category: category.toUpperCase(),
     });
     const food = await FoodServices.createFood(newFood);
     res.json(food);
