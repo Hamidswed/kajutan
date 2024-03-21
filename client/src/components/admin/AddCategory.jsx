@@ -72,26 +72,16 @@ export default function AddCategory({ categoryToEdit = {}, onClose }) {
         )}
         <input
           type="text"
-          {...register("included", { required: "Required" })}
+          {...register("included")}
           placeholder="Enter included..."
           className="border border-gray-400"
         />
-        {errors && errors.included && (
-          <span className="block text-sm text-red-500">
-            {errors.included.message}
-          </span>
-        )}
         <input
           type="text"
-          {...register("main_img", { required: "Required" })}
+          {...register("main_img")}
           placeholder="Enter image..."
           className="border border-gray-400"
         />
-        {errors && errors.main_img && (
-          <span className="block text-sm text-red-500">
-            {errors.main_img.message}
-          </span>
-        )}
 
         <button className="bg-k-lightBrown w-full py-2 rounded-md flex justify-center">
           {isCreating || isEditing ? <Loading height="25" /> : "Submit"}

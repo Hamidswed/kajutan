@@ -90,7 +90,6 @@ export default function AddFood({ foodToEdit = {}, onClose }) {
           className="bg-transparent border border-gray-400 py-2 px-1 rounded-md text-gray-400"
           {...register("category", { required: "Required" })}
         >
-          {/* <option className="bg-neutral-800 ">Select category</option> */}
           {categories?.map((category) => {
             return (
               <option
@@ -116,15 +115,10 @@ export default function AddFood({ foodToEdit = {}, onClose }) {
         />
         <input
           type="text"
-          {...register("image", { required: "Required" })}
+          {...register("image")}
           placeholder="Enter image..."
           className="border border-gray-400"
         />
-        {errors && errors.image && (
-          <span className="block text-sm text-red-500">
-            {errors.image.message}
-          </span>
-        )}
 
         <button className="bg-k-lightBrown w-full py-2 rounded-md flex justify-center">
           {isPending || isEditing ? <Loading height="25" /> : "Submit"}

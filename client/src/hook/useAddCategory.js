@@ -7,7 +7,7 @@ export default function useAddCategory() {
   const { isPending: isCreating, mutate: createCategory } = useMutation({
     mutationFn: addCategory,
     onSuccess: (data) => {
-      toast.success(`${data.title} is added successfully!`);
+      toast.success(`${data.main_title} is added successfully!`);
       queryClient.invalidateQueries({
         queryKey: ["get-categories"],
       });

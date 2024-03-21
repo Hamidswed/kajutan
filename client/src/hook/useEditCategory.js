@@ -7,7 +7,7 @@ export default function useEditCategory() {
   const { isPending: isEditing, mutate: updateCategory } = useMutation({
     mutationFn: editCategory,
     onSuccess: (data) => {
-      toast.success(`The Category is edited successfully!`);
+      toast.success(`${data.main_title} is edited successfully!`);
       queryClient.invalidateQueries({
         queryKey: ["get-categories"],
       });
