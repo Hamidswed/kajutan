@@ -72,12 +72,35 @@ export const deleteFoodById = async (req, res) => {
   }
 };
 
+export const deleteCategoryById = async (req, res) => {
+  try {
+    const deletedCategory = await FoodServices.deleteCategoryById(
+      req.params.id
+    );
+    res.json(deletedCategory);
+  } catch (error) {
+    res.json(error);
+  }
+};
+
 export const updateFoodById = async (req, res) => {
   const foodId = req.params.id;
   const newFoodInfo = req.body;
   try {
-    const updatedUser = await FoodServices.updateFoodById(foodId, newFoodInfo);
-    res.json(updatedUser);
+    const updatedFood = await FoodServices.updateFoodById(foodId, newFoodInfo);
+    res.json(updatedFood);
+  } catch (error) {
+    res.json(error);
+  }
+};
+
+export const updateCategoryById = async (req, res) => {
+  try {
+    const updatedCategory = await FoodServices.updateCategoryById(
+      req.params.id,
+      req.body
+    );
+    res.json(updatedCategory);
   } catch (error) {
     res.json(error);
   }

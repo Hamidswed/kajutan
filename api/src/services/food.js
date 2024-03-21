@@ -17,6 +17,13 @@ const getFoods = async () => {
   return Food.find();
 };
 
+const updateCategoryById = async (id, update) => {
+  return Category.findByIdAndUpdate(id, update, { new: true });
+};
+const deleteCategoryById = async (id) => {
+  return Category.findByIdAndDelete(id);
+};
+
 const createFood = async (food) => {
   return food.save();
 };
@@ -37,4 +44,6 @@ export default {
   getFoods,
   updateFoodById,
   deleteFoodById,
+  updateCategoryById,
+  deleteCategoryById,
 };
