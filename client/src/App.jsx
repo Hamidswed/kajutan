@@ -13,10 +13,11 @@ import LoginUser from "./pages/LoginUser";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./components/HOC/ProtectedRoute";
 import Admin from "./pages/Admin";
+import MenuManagment from "./components/admin/MenuManagment";
+import CategoryManagment from "./components/admin/CategoryManagment";
 
 const queryClient = new QueryClient();
 function App() {
-
   return (
     <QueryClientProvider client={queryClient}>
       <Toaster />
@@ -30,7 +31,11 @@ function App() {
             <Route path="matsal" element={<Matsal />} />
           </Route>
           <Route element={<ProtectedRoute />}>
-            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin" element={<Admin />}>
+              <Route index element={<Navigate to="foods" replace />} />
+              <Route path="foods" element={<MenuManagment />} />
+              <Route path="categories" element={<CategoryManagment />} />
+            </Route>
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

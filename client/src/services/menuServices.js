@@ -19,3 +19,4 @@ export async function removeFood(id) {
   const { data } = await http.delete(`/foods/${id}`);
   return data;
 }
+

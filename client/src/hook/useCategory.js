@@ -3,7 +3,7 @@ import { getCategories } from "../services/categoryServices";
 
 export default function useCategory() {
   return useQuery({
-    queryKey: ["get-category"],
+    queryKey: ["get-categories"],
     queryFn: getCategories,
   });
 }
