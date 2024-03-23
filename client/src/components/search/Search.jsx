@@ -1,6 +1,6 @@
 import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/16/solid";
 
-export function Search({ searchItem, setSearchItem }) {
+export default function Search({ searchItem, setSearchItem }) {
   return (
     <div className="sticky top-0 z-10 p-2 rounded-md backdrop-blur-md">
       <div className="flex justify-between items-center mb-4 border-b border-k-xlightBrown p-2 text-k-xlightBrown lg:max-w-screen-lg">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Search } from "../search/Search";
+import Search from "../search/Search";
 import { MenuHeader } from "./MenuHeader";
 import { Loading } from "../loading/Loading";
 import useMenu from "../../hook/useMenu";

@@ -1,6 +1,6 @@
-export default function FilterInput({optionHandler, categories}) {
+export default function FilterInput({ optionHandler, categories }) {
   return (
-    <form className="flex justify-between items-center max-w-[300px] gap-x-10 order-2">
+    <form className="flex justify-between items-center max-w-[300px] gap-x-10 order-2 md:flex-1 md:gap-x-4">
       <label htmlFor="menu">Filter</label>
       <select
         id="menu"
