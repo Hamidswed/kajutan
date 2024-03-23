@@ -1,12 +1,12 @@
 import Table from "../../table/Table";
-import CommentRow from './CommentRow';
+import CommentRow from "./CommentRow";
 
 export default function CommentTable({ comments }) {
-  console.log(comments, "comments");
+  if (comments.length === 0)
+    return <div className="text-white">No comments!</div>;
   return (
     <Table>
       <Table.Header>
-        <th>#</th>
         <th>Name</th>
         <th>Email</th>
         <th>Comments</th>

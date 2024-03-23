@@ -1,4 +1,11 @@
-export default function ConfirmDelete({ resourceName, onClose, onConfirm }) {
+import { Loading } from "../components/loading/Loading";
+
+export default function ConfirmDelete({
+  resourceName,
+  onClose,
+  onConfirm,
+  isDeleting,
+}) {
   return (
     <div className="text-neutral-800 pt-2">
       <h2>
@@ -6,10 +13,10 @@ export default function ConfirmDelete({ resourceName, onClose, onConfirm }) {
       </h2>
       <div className="flex justify-around mt-3 gap-x-2">
         <button
-          className="bg-red-600 text-white px-3 py-1 rounded-md w-full"
+          className="bg-red-600 text-white px-3 py-1 rounded-md w-full flex justify-center items-center"
           onClick={onConfirm}
         >
-          Yes
+          {isDeleting ? <Loading height="20" width="40" color="#fff" /> : "Yes"}
         </button>
         <button
           className="bg-k-brown text-white px-3 py-1 rounded-md w-full"

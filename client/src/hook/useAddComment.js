@@ -1,13 +1,13 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-
+import { createComment } from "../services/commentServices";
 
 export default function useAddComment() {
   const queryClient = useQueryClient();
-  const { isPending: isCreating, mutate: createComment } = useMutation({
+  const { isPending: isCreating, mutate: addComment } = useMutation({
     mutationFn: createComment,
-    onSuccess: (data) => {
-      toast.success(`Your comment sent successfully!`);
+    onSuccess: () => {
+      toast.success(`Thanks for your comment!`);
       queryClient.invalidateQueries({
         queryKey: ["get-comments"],
       });
@@ -15,5 +15,5 @@ export default function useAddComment() {
 
     onError: (err) => toast.error(err.message),
   });
-  return { isCreating, createComment };
+  return { isCreating, addComment };
 }

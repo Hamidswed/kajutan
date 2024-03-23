@@ -1,10 +1,13 @@
 import { useForm } from "react-hook-form";
+import useAddComment from "../../hook/useAddComment";
+import { Loading } from "../loading/Loading";
 
 export function ContactOss() {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const validationSchema = {
     required: "Required",
@@ -13,7 +16,15 @@ export function ContactOss() {
       message: "Invalid email address",
     },
   };
+
+  const { addComment, isCreating } = useAddComment();
+
   const mySubmit = (data) => {
+    addComment(data, {
+      onSuccess: () => {
+        reset();
+      },
+    });
     console.log(data);
   };
 
@@ -56,7 +67,7 @@ export function ContactOss() {
           type="submit"
           className="bg-k-lightBrown w-full py-2 rounded-md flex justify-center"
         >
-          Submit
+          {isCreating ? <Loading height="25" /> : "Submit"}
         </button>
       </form>
     </div>

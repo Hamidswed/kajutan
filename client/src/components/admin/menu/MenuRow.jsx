@@ -9,7 +9,7 @@ import useRemoveFood from "../../../hook/useRemoveFood";
 export default function MenuRow({ food }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
-  const { deleteFood } = useRemoveFood();
+  const { deleteFood, isDeleting } = useRemoveFood();
 
   return (
     <Table.Row className="cursor-pointer">
@@ -49,6 +49,7 @@ export default function MenuRow({ food }) {
                 onSuccess: (data) => setIsDeleteOpen(false),
               })
             }
+            isDeleting={isDeleting}
           />
         </Modal>
       </td>

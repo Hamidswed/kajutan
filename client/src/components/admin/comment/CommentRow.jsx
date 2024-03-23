@@ -1,38 +1,41 @@
 import { useState } from "react";
 import Table from "../../table/Table";
-import useRemoveCategory from "../../../hook/useRemoveCategory";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import Modal from "../../../ui/Modal";
+import useRemoveComment from "../../../hook/useRemoveComment";
+import ConfirmDelete from "../../../ui/ConfirmDelete";
 
 export default function CommentRow({ comment, index }) {
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
-  const { deleteCategory } = useRemoveCategory();
+  const { deleteComment, isDeleting } = useRemoveComment();
 
   return (
     <Table.Row className="cursor-pointer">
-      <td>{index + 1}</td>
-      <td>{comment.name}</td>
+      <td>
+        {index + 1}.{comment.name}
+      </td>
       <td>{comment.email}</td>
       <td>{comment.message}</td>
       <td className="min-[480px]:space-x-1 sm:space-x-2 text-center">
         <button onClick={() => setIsDeleteOpen(true)}>
           <TrashIcon className="w-4 sm:w-4 text-red-600" />
         </button>
-        {/* <Modal
+        <Modal
           open={isDeleteOpen}
           onClose={() => setIsDeleteOpen(false)}
-          title={`Delete ${category.main_title}`}
+          title={`Delete ${comment.name}`}
         >
           <ConfirmDelete
-            resourceName={category.main_title}
+            resourceName={comment.name}
             onClose={() => setIsDeleteOpen(false)}
             onConfirm={() =>
-              deleteCategory(category._id, {
-                onSuccess: (data) => setIsDeleteOpen(false),
+              deleteComment(comment._id, {
+                onSuccess: () => setIsDeleteOpen(false),
               })
             }
+            isDeleting={isDeleting}
           />
-        </Modal> */}
+        </Modal>
       </td>
     </Table.Row>
   );

@@ -4,7 +4,6 @@ import CommentTable from "./CommentTable";
 
 export default function CommentManagment() {
   const { isLoading, data: comments } = useComment();
-  console.log(comments);
 
   if (isLoading) return <Loading />;
 

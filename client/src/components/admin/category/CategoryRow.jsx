@@ -9,7 +9,7 @@ import useRemoveCategory from "../../../hook/useRemoveCategory";
 export default function CategoryRow({ category }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
-  const { deleteCategory } = useRemoveCategory();
+  const { deleteCategory, isDeleting } = useRemoveCategory();
 
   return (
     <Table.Row className="cursor-pointer">
@@ -45,9 +45,10 @@ export default function CategoryRow({ category }) {
             onClose={() => setIsDeleteOpen(false)}
             onConfirm={() =>
               deleteCategory(category._id, {
-                onSuccess: (data) => setIsDeleteOpen(false),
+                onSuccess: () => setIsDeleteOpen(false),
               })
             }
+            isDeleting={isDeleting}
           />
         </Modal>
       </td>
