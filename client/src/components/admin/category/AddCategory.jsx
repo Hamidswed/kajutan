@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import { Loading } from "../loading/Loading";
+import { Loading } from "../../loading/Loading";
 import toast from "react-hot-toast";
-import useAddCategory from "../../hook/useAddCategory";
-import useEditCategory from "../../hook/useEditCategory";
+import useAddCategory from "../../../hook/useAddCategory";
+import useEditCategory from "../../../hook/useEditCategory";
 
 export default function AddCategory({ categoryToEdit = {}, onClose }) {
   const { _id: editId } = categoryToEdit;

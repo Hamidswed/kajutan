@@ -1,4 +1,4 @@
-import Table from "../table/Table";
+import Table from "../../table/Table";
 import CategoryRow from "./CategoryRow";
 
 export default function CategoryTable({ categories }) {

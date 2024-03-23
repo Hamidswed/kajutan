@@ -13,8 +13,8 @@ import LoginUser from "./pages/LoginUser";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./components/HOC/ProtectedRoute";
 import Admin from "./pages/Admin";
-import MenuManagment from "./components/admin/MenuManagment";
-import CategoryManagment from "./components/admin/CategoryManagment";
+import MenuManagment from "./components/admin//menu/MenuManagment";
+import CategoryManagment from "./components/admin/category/CategoryManagment";
 
 const queryClient = new QueryClient();
 function App() {

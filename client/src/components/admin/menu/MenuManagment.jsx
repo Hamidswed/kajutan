@@ -1,11 +1,11 @@
 import { useState } from "react";
-import useCategory from "../../hook/useCategory";
-import useMenu from "../../hook/useMenu";
-import Modal from "../../ui/Modal";
-import { Loading } from "../loading/Loading";
+import useCategory from "../../../hook/useCategory";
+import useMenu from "../../../hook/useMenu";
+import Modal from "../../../ui/Modal";
+import { Loading } from "../../loading/Loading";
 import AddFood from "./AddFood";
 import MenuTable from "./MenuTable";
-import FilterInput from "../../ui/FilterInput";
+import FilterInput from "../../../ui/FilterInput";
 
 export default function MenuManagment() {
   const [option, setOption] = useState("All");

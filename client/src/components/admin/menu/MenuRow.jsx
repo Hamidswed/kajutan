@@ -1,10 +1,10 @@
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
-import Table from "../table/Table";
-import Modal from "../../ui/Modal";
+import Table from "../../table/Table";
+import Modal from "../../../ui/Modal";
 import AddFood from "./AddFood";
 import { useState } from "react";
-import ConfirmDelete from "../../ui/ConfirmDelete";
-import useRemoveFood from "../../hook/useRemoveFood";
+import ConfirmDelete from "../../../ui/ConfirmDelete";
+import useRemoveFood from "../../../hook/useRemoveFood";
 
 export default function MenuRow({ food }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -24,7 +24,7 @@ export default function MenuRow({ food }) {
       <td>{food.price}</td>
       <td className="min-[480px]:space-x-1 sm:space-x-2 text-center">
         <button onClick={() => setIsEditOpen(true)}>
-          <PencilIcon className="w-3 sm:w-4 md:w-5" />
+          <PencilIcon className="w-4 sm:w-5" />
         </button>
         <Modal
           open={isEditOpen}
@@ -34,7 +34,7 @@ export default function MenuRow({ food }) {
           <AddFood foodToEdit={food} onClose={() => setIsEditOpen(false)} />
         </Modal>
         <button onClick={() => setIsDeleteOpen(true)}>
-          <TrashIcon className="w-3 sm:w-4 md:w-5 text-red-600" />
+          <TrashIcon className="w-4 sm:w-5 text-red-600" />
         </button>
         <Modal
           open={isDeleteOpen}
@@ -44,9 +44,11 @@ export default function MenuRow({ food }) {
           <ConfirmDelete
             resourceName={food.title}
             onClose={() => setIsDeleteOpen(false)}
-            onConfirm={()=>deleteFood(food._id, {
-              onSuccess: (data) => setIsDeleteOpen(false),
-            })}
+            onConfirm={() =>
+              deleteFood(food._id, {
+                onSuccess: (data) => setIsDeleteOpen(false),
+              })
+            }
           />
         </Modal>
       </td>

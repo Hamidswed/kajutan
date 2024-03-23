@@ -1,4 +1,4 @@
-import Table from "../table/Table";
+import Table from "../../table/Table";
 import MenuRow from "./MenuRow";
 
 export default function MenuTable({ filteredData }) {

@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import useCategory from "../../hook/useCategory";
-import { Loading } from "../loading/Loading";
-import useAddFood from "../../hook/useAddFood";
-import useEditFood from "../../hook/useEditFood";
+import useCategory from "../../../hook/useCategory";
+import { Loading } from "../../loading/Loading";
+import useAddFood from "../../../hook/useAddFood";
+import useEditFood from "../../../hook/useEditFood";
 import toast from "react-hot-toast";
 
 export default function AddFood({ foodToEdit = {}, onClose }) {

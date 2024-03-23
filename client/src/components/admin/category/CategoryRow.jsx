@@ -1,10 +1,10 @@
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
-import Table from "../table/Table";
-import Modal from "../../ui/Modal";
+import Table from "../../table/Table";
+import Modal from "../../../ui/Modal";
 import { useState } from "react";
-import ConfirmDelete from "../../ui/ConfirmDelete";
+import ConfirmDelete from "../../../ui/ConfirmDelete";
 import AddCategory from "./AddCategory";
-import useRemoveCategory from "./../../hook/useRemoveCategory";
+import useRemoveCategory from "../../../hook/useRemoveCategory";
 
 export default function CategoryRow({ category }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function CategoryRow({ category }) {
       <td>{category.included}</td>
       <td className="min-[480px]:space-x-1 sm:space-x-2 text-center">
         <button onClick={() => setIsEditOpen(true)}>
-          <PencilIcon className="w-3 sm:w-4 md:w-5" />
+          <PencilIcon className="w-4 sm:w-4" />
         </button>
         <Modal
           open={isEditOpen}
@@ -33,7 +33,7 @@ export default function CategoryRow({ category }) {
           />
         </Modal>
         <button onClick={() => setIsDeleteOpen(true)}>
-          <TrashIcon className="w-3 sm:w-4 md:w-5 text-red-600" />
+          <TrashIcon className="w-4 sm:w-4 text-red-600" />
         </button>
         <Modal
           open={isDeleteOpen}

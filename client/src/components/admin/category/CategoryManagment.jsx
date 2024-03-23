@@ -1,12 +1,15 @@
 import { useState } from "react";
-import useCategory from "../../hook/useCategory";
+import useCategory from "../../../hook/useCategory";
 import CategoryTable from "./CategoryTable";
 import AddCategory from "./AddCategory";
-import Modal from "./../../ui/Modal";
+import Modal from "../../../ui/Modal";
+import { Loading } from "../../loading/Loading";
 
 export default function CategoryManagment() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { data: categories } = useCategory();
+  const { data: categories, isLoading } = useCategory();
+
+  if (isLoading) return <Loading />;
   return (
     <div className="w-full min-[400px]:w-full md:max-w-screen-md flex flex-col items-center">
       <button
