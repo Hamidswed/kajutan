@@ -24,3 +24,14 @@ export const createNewComment = async (req, res) => {
     console.log(error);
   }
 };
+
+export const deleteCommentById = async (req, res) => {
+  try {
+    const deletedComment = await CommentServices.deleteCommentById(
+      req.params.id
+    );
+    res.json(deletedComment);
+  } catch (error) {
+    res.json(error);
+  }
+};
