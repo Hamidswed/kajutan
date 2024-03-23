@@ -15,6 +15,7 @@ import ProtectedRoute from "./components/HOC/ProtectedRoute";
 import Admin from "./pages/Admin";
 import MenuManagment from "./components/admin//menu/MenuManagment";
 import CategoryManagment from "./components/admin/category/CategoryManagment";
+import CommentManagment from "./components/admin/comment/CommentManagment";
 
 const queryClient = new QueryClient();
 function App() {
@@ -35,6 +36,7 @@ function App() {
               <Route index element={<Navigate to="foods" replace />} />
               <Route path="foods" element={<MenuManagment />} />
               <Route path="categories" element={<CategoryManagment />} />
+              <Route path="comments" element={<CommentManagment />} />
             </Route>
           </Route>
           <Route path="/about" element={<About />} />

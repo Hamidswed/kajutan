@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 
 export default function Table({ children }) {
   return (
-    <div>
+    <div className="w-full flex justify-center">
       <table>{children}</table>
     </div>
   );

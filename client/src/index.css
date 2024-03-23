@@ -50,7 +50,7 @@ table td{
   color: #fff;
 }
 
-input{
+input, textarea{
   border-radius: .375rem;
   padding: .5rem;
   color: #926b48;
