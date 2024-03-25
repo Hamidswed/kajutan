@@ -8,7 +8,7 @@ export default function CommentManagment() {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="w-full min-[400px]:w-[70%] md:max-w-screen-md flex flex-col items-center">
+    <div className="w-full min-[400px]:w-[90%] md:max-w-screen-md flex flex-col items-center">
       <CommentTable comments={comments} />
     </div>
   );

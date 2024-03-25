@@ -7,7 +7,7 @@ export function Loading({ width = "75", height = "40", color = "#926b48" }) {
       width={width}
       radius={9}
       color={color}
-      wrapperClass={{
+      wrapperStyle={{
         display: "flex",
         justifyContent: "center",
       }}

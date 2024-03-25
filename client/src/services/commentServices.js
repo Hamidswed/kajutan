@@ -14,3 +14,8 @@ export async function removeComment(id) {
   const { data } = await http.delete(`/comments/${id}`);
   return data;
 }
+
+export async function confirmedComment({ id, newComment }) {
+  const { data } = await http.patch(`/comments/update/${id}`, newComment);
+  return data;
+}

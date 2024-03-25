@@ -7,9 +7,12 @@ export default function CommentTable({ comments }) {
   return (
     <Table>
       <Table.Header>
+        <th>#</th>
         <th>Name</th>
         <th>Email</th>
         <th>Comments</th>
+        <th>Confirmed</th>
+        <th className="text-center">Date</th>
         <th className="text-center">...</th>
       </Table.Header>
       <Table.Body>

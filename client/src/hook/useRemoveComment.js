@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeComment } from "../services/commentServices";
+import toast from "react-hot-toast";
 
 export default function useRemoveComment() {
   const queryClient = useQueryClient();
