@@ -12,8 +12,13 @@ const deleteCommentById = async (id) => {
   return Comment.findByIdAndDelete(id);
 };
 
+const updateCommentById = async (id, update) => {
+  return Comment.findByIdAndUpdate(id, update, { new: true });
+};
+
 export default {
   createComment,
   getComments,
   deleteCommentById,
+  updateCommentById,
 };

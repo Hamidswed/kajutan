@@ -35,3 +35,15 @@ export const deleteCommentById = async (req, res) => {
     res.json(error);
   }
 };
+
+export const updateCommentById = async (req, res) => {
+  try {
+    const updatedComment = await CommentServices.updateCommentById(
+      req.params.id,
+      req.body
+    );
+    res.json(updatedComment);
+  } catch (error) {
+    res.json(error);
+  }
+};
