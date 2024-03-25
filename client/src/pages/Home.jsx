@@ -1,11 +1,13 @@
 import { Body } from "../components/body/Body";
+import CommentList from "../components/comments/commentList";
 import { Hero } from "../components/hero/Hero";
 
 export function Home() {
   return (
-    <div>
+    <div className="pb-24 flex flex-col items-center">
       <Hero />
       <Body />
+      <CommentList />
     </div>
   );
 }
