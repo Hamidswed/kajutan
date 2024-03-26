@@ -1,5 +1,5 @@
 import { Body } from "../components/body/Body";
-import CommentList from "../components/comments/commentList";
+import CommentList from "../components/comments/CommentList";
 import { Hero } from "../components/hero/Hero";
 
 export function Home() {
