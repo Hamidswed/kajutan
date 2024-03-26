@@ -10,8 +10,8 @@ export default function CommentList() {
 
   if (isPending) return <Loading />;
   return (
-    <div className="flex flex-col items-center gap-y-3 w-full px-6">
-      <h1 className="text-k-brown text-xl">Vad folk säger</h1>
+    <div className="flex flex-col items-center justify-center w-full px-6">
+      <h1 className="text-k-brown text-xl mb-6">Vad folk säger</h1>
       <div className="comments">
         {confirmedComments?.map((comment) => {
           return <CommentItem key={comment._id} comment={comment} />;
