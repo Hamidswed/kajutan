@@ -2,7 +2,7 @@ import Table from "../../table/Table";
 import CommentRow from "./CommentRow";
 
 export default function CommentTable({ comments }) {
-  if (comments.length === 0)
+  if (comments?.length === 0)
     return <div className="text-white">No comments!</div>;
   return (
     <Table>
