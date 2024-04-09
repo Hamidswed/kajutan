@@ -34,6 +34,7 @@ export default function CommentRow({ comment, index }) {
             type="checkbox"
             checked={comment.isConfirmed}
             onChange={isConfirmedHandler}
+            className="cursor-pointer"
           />
         )}
       </td>
