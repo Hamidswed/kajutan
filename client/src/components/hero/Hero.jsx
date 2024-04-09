@@ -37,7 +37,7 @@ export function Hero() {
             Kajutan
           </p>
         </div>
-        <div className="text-white absolute top-[calc(30%+2rem)] flex flex-col gap-y-3 xl:gap-y-6">
+        <div className="text-white absolute top-[calc(27%+2rem)] flex flex-col gap-y-3 xl:gap-y-6">
           <p className="md:text-xl xl:text-3xl">Kolla på meny!</p>
           <button className=" border-2 border-k-lightBrown py-2 rounded-xl animate-pulse hover:bg-k-lightBrown xl:text-xl">
             <Link to="/menu">Meny</Link>

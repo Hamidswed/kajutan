@@ -10,7 +10,7 @@ export default function CommentItem({ comment }) {
   };
 
   return (
-    <div className="flex flex-col gap-y-3 gap-x-2 w-full p-2 border border-k-brown rounded-md sm:w-[48%] mx-auto md:w-[32%] lg:min-h-20 lg:min-w-[30%]">
+    <div className="flex flex-col gap-y-3 gap-x-2 w-full p-2 border border-k-brown rounded-md mx-auto lg:min-h-20 sm:min-w-[calc(50%-1rem)] md:min-w-[30%] lg:min-w-[25%]">
       <div className="flex items-center gap-x-2">
         <div>
           <UserCircleIcon className="w-10 text-gray-500" />
