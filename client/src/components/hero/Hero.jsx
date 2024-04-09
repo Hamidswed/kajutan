@@ -29,7 +29,7 @@ export function Hero() {
           />
           <img alt="banner" src={BgLarg} />
         </picture>
-        <div className="text-white flex flex-col items-center absolute z-10 top-10 min-[430px]:top-16 min-[460px]:top-20 md:top-8 lg:top-16">
+        <div className="text-white flex flex-col items-center absolute z-10 top-10 min-[430px]:top-16 min-[460px]:top-20 md:top-8 lg:top-20">
           <p className="text-k-lightBrown min-[520px]:text-lg md:text-2xl lg:text-4xl">
             Välkomna till
           </p>
