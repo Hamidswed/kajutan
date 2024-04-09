@@ -32,10 +32,10 @@ export default function CommentList() {
         <h1 className="text-k-brown text-xl mb-6">Vad folk säger</h1>
         <div className="flex items-center gap-4 w-full justify-center">
           <button
-            className={`hidden xl:${commentsLength >= 4 ? "block" : "hidden"}`}
+            className={`hidden xl:${commentsLength >= 4 ? "block" : "hidden"} `}
             onClick={scrollLeft}
           >
-            <ArrowLeftCircleIcon className="w-7 text-k-brown opacity-50 hover:opacity-100" />
+            <ArrowLeftCircleIcon className="w-7 text-k-brown opacity-50 hover:opacity-100 transition-all duration-300" />
           </button>
           <div className="comments scroll-smooth" ref={containerRef}>
             {sortedByDate(confirmedComments)?.map((comment) => {
@@ -46,7 +46,7 @@ export default function CommentList() {
             className={`hidden xl:${commentsLength >= 4 ? "block" : "hidden"}`}
             onClick={scrollRight}
           >
-            <ArrowRightCircleIcon className="w-7 text-k-brown opacity-50 hover:opacity-100" />
+            <ArrowRightCircleIcon className="w-7 text-k-brown opacity-50 hover:opacity-100 transition-all duration-300" />
           </button>
         </div>
       </div>
