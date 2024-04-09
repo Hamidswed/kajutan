@@ -13,7 +13,7 @@ export default function CommentList() {
   const confirmedComments = comments?.filter(
     (comment) => comment.isConfirmed === true
   );
-  const commentsLength = confirmedComments.length;
+  const commentsLength = confirmedComments?.length;
   const containerRef = useRef(null);
 
   const scrollLeft = () => {
