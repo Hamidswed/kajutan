@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom";
 import Kajutan from "../../assets/kajutan.jpg";
 import { MapPinIcon } from "@heroicons/react/16/solid";
-import { useEffect } from "react";
-import clearTokenFromLocalStorage from "../../util/clearToken";
 
 export function Body() {
   return (
-    <div className="px-4 mt-16 container 2xl:max-w-screen-2xl mx-auto flex flex-col items-center">
+    <div className="px-4 mt-28 container 2xl:max-w-screen-2xl mx-auto flex flex-col items-center z-20">
       <div className="w-full">
         <div className="text-k-lightBrown relative flex flex-col items-center">
-          <h2 className="bg-neutral-800 px-4 absolute -top-3 xl:text-2xl xl:-top-4 xl:px-6">
+        <div className="border border-k-lightBrown w-full"></div>
+
+          <h2 className=" py-2 px-4 xl:text-2xl xl:-top-4 xl:px-6">
             Öppettider
           </h2>
-          <div className="border border-k-lightBrown w-full"></div>
         </div>
         <div className="flex justify-center text-white gap-x-5 mt-6 xl:mt-10">
           <div className="text-K-xlightBrown xl:text-xl flex flex-col xl:gap-y-2">
