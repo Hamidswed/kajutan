@@ -29,7 +29,7 @@ export function Hero() {
           />
           <img alt="banner" src={BgLarg} className="w-full"/>
         </picture>
-        <div className="text-white flex flex-col items-center absolute z-10 top-6 min-[430px]:top-16 min-[460px]:top-20 md:top-8 xl:top-24">
+        <div className="text-white flex flex-col items-center absolute z-10 top-6 min-[400px]:top-12 min-[460px]:top-20 sm:top-28 md:top-8 xl:top-24">
           <p className="text-k-lightBrown min-[520px]:text-lg md:text-2xl lg:text-4xl">
             Välkomna till
           </p>
@@ -37,7 +37,7 @@ export function Hero() {
             Kajutan
           </p>
         </div>
-        <div className="text-white absolute top-[calc(27%+2rem)] min-[520px]:top-[40%] flex flex-col gap-y-3 xl:gap-y-6">
+        <div className="text-white absolute top-[calc(45%-2rem)] min-[520px]:top-[40%] xl:top-[35%] flex flex-col gap-y-3 xl:gap-y-6">
           <p className="md:text-xl xl:text-3xl">Kolla på meny!</p>
           <button className=" border-2 border-k-lightBrown py-2 rounded-xl animate-pulse hover:bg-k-lightBrown xl:text-xl">
             <Link to="/menu">Meny</Link>
